@@ -1,0 +1,101 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  background-color: var(--bg);
+  color: var(--mainText);
+  font-family: "NotoSansKR";
+  box-sizing: border-box;
+  transition: background-color 0.2;
+}
+
+/* 라이트모드(기본) */
+:root {
+  // 브랜드 컬러
+  --primaryColor: #fcd034;
+
+  // 배경
+  --bg: #ffffff;
+  --subBg: #f9f9f9;
+  --overlay: #e5e5e5;
+
+  // 텍스트
+  --mainText: #21252f;
+  --subText: #868d9a;
+
+  // font size
+  --xs: 0.75rem;
+  --sm: 0.875rem;
+  --base: 1rem;
+  --lg: 1.125rem;
+  --xl: 1.25rem;
+  --2xl: 1.5rem;
+  --3xl: 1.875rem;
+  --4xl: 2.25rem;
+  --5xl: 3rem;
+  --6xl: 4rem;
+
+  // color
+  --gray100: #f7fafc;
+  --gray200: #edf2f7;
+  --gray300: #e2e8f0;
+  --gray400: #cbd5e0;
+  --gray500: #a0aec0;
+  --gray600: #718096;
+  --gray700: #4a5568;
+  --gray800: #2d3748;
+  --gray900: #1a202c;
+
+  --blue100: #ebf8ff;
+  --blue200: #bee3f8;
+  --blue300: #90cdf4;
+  --blue400: #63b3ed;
+  --blue500: #4299e1;
+  --blue600: #3182ce;
+  --blue700: #2b6cb0;
+  --blue800: #2c5282;
+  --blue900: #2a4365;
+}
+
+/* 다크모드 */
+[data-theme="Dark"] {
+  // 브랜드 컬러
+  --primaryColor: #fbd538;
+
+  // 배경
+  --bg: #121213;
+  --subBg: #191f28;
+  --overlay: #202020;
+
+  // 텍스트
+  --mainText: #ffffff;
+  --subText: #868d9a;
+}
+
+/* react-modal */
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--after-open {
+  overflow: visible !important;
+}
