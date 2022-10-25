@@ -17,20 +17,21 @@ a {
   font-family: "NotoSansKR";
   box-sizing: border-box;
   transition: background-color 0.2;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* 라이트모드(기본) */
+/* 다크 모드(기본) */
 :root {
   // 브랜드 컬러
-  --primaryColor: #fcd034;
+  --primaryColor: #fbd538;
 
   // 배경
-  --bg: #ffffff;
-  --subBg: #f9f9f9;
-  --overlay: #e5e5e5;
+  --bg: #121213;
+  --subBg: #191f28;
+  --overlay: #202020;
 
   // 텍스트
-  --mainText: #21252f;
+  --mainText: #ffffff;
   --subText: #868d9a;
 
   // font size
@@ -67,18 +68,18 @@ a {
   --blue900: #2a4365;
 }
 
-/* 다크모드 */
-[data-theme="Dark"] {
+/* 라이트 모드 */
+[data-theme="Light"] {
   // 브랜드 컬러
-  --primaryColor: #fbd538;
+  --primaryColor: #fcd034;
 
   // 배경
-  --bg: #121213;
-  --subBg: #191f28;
-  --overlay: #202020;
+  --bg: #ffffff;
+  --subBg: #f9f9f9;
+  --overlay: #e5e5e5;
 
   // 텍스트
-  --mainText: #ffffff;
+  --mainText: #21252f;
   --subText: #868d9a;
 }
 

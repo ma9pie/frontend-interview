@@ -9,22 +9,17 @@ function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
   return (
-    <Wrapper>
-      <Overlay>
-        <Content>
-          <Global styles={reset}></Global>
-          {getLayout(<Component {...pageProps} />)}
-        </Content>
-      </Overlay>
-    </Wrapper>
+    <Overlay>
+      <Content>
+        <Global styles={reset}></Global>
+        {getLayout(<Component {...pageProps} />)}
+      </Content>
+    </Overlay>
   );
 }
 
 export default App;
 
-const Wrapper = styled.div`
-  min-width: 320px;
-`;
 const Overlay = styled.div`
   display: flex;
   justify-content: center;
@@ -32,6 +27,8 @@ const Overlay = styled.div`
   height: 100vh;
 `;
 const Content = styled.div`
-  width: 1280px;
+  min-width: 360px;
+  max-width: 1280px;
+  width: 100%;
   height: 100%;
 `;

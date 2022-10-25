@@ -20,7 +20,7 @@ const Wrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 60px;
   padding: 0px 20px;
   background: linear-gradient(-45deg, #ef32d9, #89fffd);
   & * {
@@ -29,7 +29,7 @@ const Wrapper = styled.header`
 `;
 
 const Title = styled.h1`
-  font-size: var(--4xl);
+  font-size: var(--xl);
   font-weight: 700;
   color: black;
 `;

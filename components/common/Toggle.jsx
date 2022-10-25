@@ -18,8 +18,8 @@ export default Toggle;
 
 Toggle.defaultProps = {
   id: "checkbox1", // 체크박스 id
-  width: "56px", // 토글 너비
-  height: "28px", // 토글 높이
+  width: "50px", // 토글 너비
+  height: "25px", // 토글 높이
   margin: "0px", // 토글 마진
   padding: "0px", // 토글 패딩
   gap: "2.5px", // 슬라이더와 토글 테두리 사이의 간격

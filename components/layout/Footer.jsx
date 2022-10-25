@@ -23,4 +23,6 @@ const Wrapper = styled.footer`
   }
 `;
 
-const Copyright = styled.p``;
+const Copyright = styled.p`
+  font-size: var(--xs);
+`;

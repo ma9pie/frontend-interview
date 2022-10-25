@@ -19,5 +19,5 @@ export default CommonLayout;
 
 const Container = styled.div``;
 const Body = styled.div`
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
 `;

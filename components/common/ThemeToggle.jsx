@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import Toggle from "@/components/common/Toggle";
 
 const Theme = (props) => {
-  const [theme, setTheme] = useState("Light");
+  const [theme, setTheme] = useState("Dark");
   // 다크 모드
   const setDark = useCallback(() => {
     setTheme("Dark");
@@ -28,10 +28,10 @@ const Theme = (props) => {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("theme") === "Dark") {
-      setDark();
-    } else {
+    if (localStorage.getItem("theme") === "Light") {
       setLight();
+    } else {
+      setDark();
     }
   }, [setDark, setLight]);
 
