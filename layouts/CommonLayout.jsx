@@ -17,7 +17,8 @@ function CommonLayout(props) {
 
 export default CommonLayout;
 
-const Container = styled.div``;
-const Body = styled.div`
-  height: calc(100vh - 100px);
+const Container = styled.div`
+  position: relative;
+  min-height: 100%;
 `;
+const Body = styled.div``;
