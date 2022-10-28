@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 import React, { useState } from "react";
 import "@/styles/fonts.scss";
 import "@/styles/globals.scss";
-import reset from "@/styles/reset";
+
+// import reset from "@/styles/reset";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -11,7 +12,7 @@ function App({ Component, pageProps }) {
   return (
     <Overlay>
       <Content>
-        <Global styles={reset}></Global>
+        {/* <Global styles={reset}></Global> */}
         {getLayout(<Component {...pageProps} />)}
       </Content>
     </Overlay>
