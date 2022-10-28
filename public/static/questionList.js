@@ -56,6 +56,11 @@ inerview.JavaScript = [
   },
   {
     importance: "5",
+    question: "map과 foreach의 차이를 설명해주세요.",
+    answer: "",
+  },
+  {
+    importance: "5",
     question: "var, let, const의 차이를 설명해주세요.",
     answer: "",
   },
@@ -72,6 +77,11 @@ inerview.JavaScript = [
   {
     importance: "5",
     question: "이벤트 버블링과 이벤트 캡처링에 대해 설명해주세요.",
+    answer: "",
+  },
+  {
+    importance: "5",
+    question: "이벤트 전파와 이벤트 위임에 대해 설명해주세요.",
     answer: "",
   },
   {
@@ -261,6 +271,11 @@ inerview.Frontend = [
     question: "웹 서비스 배포 시스템 구축 경험이 있으신가요?",
     answer: "",
   },
+  {
+    importance: "5",
+    question: "HTML에서의 attributes와 properties의 차이점을 설명해주세요.",
+    answer: "",
+  },
 ];
 
 inerview.etc = [
@@ -272,6 +287,11 @@ inerview.etc = [
   {
     importance: "5",
     question: "회사 지원 동기가 어떻게 되시나요.",
+    answer: "",
+  },
+  {
+    importance: "5",
+    question: "프론트엔드 포지션을 선택한 이유가 어떻게 되시나요?",
     answer: "",
   },
   {
@@ -292,6 +312,11 @@ inerview.etc = [
   {
     importance: "5",
     question: "협업을 하면서 갈등이 생겼던 경험이 있으신가요?",
+    answer: "",
+  },
+  {
+    importance: "5",
+    question: "개발 도중에 발생하는 에러에대해 보통 어떻게 대처하시나요?",
     answer: "",
   },
 ];
