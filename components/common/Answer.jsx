@@ -4,7 +4,9 @@ import React from "react";
 const Answer = (props) => {
   return (
     <Wrapper>
-      <Text>{props.answer}</Text>
+      {props.answer.split("\n").map((item, key) => (
+        <Text key={key}>{item}</Text>
+      ))}
     </Wrapper>
   );
 };
@@ -13,6 +15,9 @@ export default Answer;
 
 const Wrapper = styled.div``;
 const Text = styled.div`
+  font-size: var(--base);
+  color: var(--subText);
   line-height: 24px;
+  min-height: 24px;
   word-break: break-all;
 `;
