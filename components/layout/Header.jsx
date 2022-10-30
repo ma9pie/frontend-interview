@@ -4,7 +4,7 @@ import ThemeToggle from "@/components/common/ThemeToggle";
 import ModalUtils from "@/utils/ModalUtils";
 import ListSvg from "@/svg/ListSvg";
 
-function Header() {
+function Header(props) {
   return (
     <Wrapper>
       <Icon
@@ -23,12 +23,11 @@ function Header() {
 export default Header;
 
 const Wrapper = styled.header`
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 0px;
-  width: 100%;
   height: 60px;
   padding: 0px 20px;
   background: linear-gradient(-45deg, #ef32d9, #89fffd);
