@@ -278,7 +278,7 @@ inerview.Frontend = [
   },
 ];
 
-inerview.etc = [
+inerview.기타 = [
   {
     importance: "5",
     question: "자기소개 부탁드립니다.",

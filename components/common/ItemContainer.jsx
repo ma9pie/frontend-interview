@@ -1,10 +1,55 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 import React from "react";
+import CsSvg from "@/svg/CsSvg";
+import FrontendSvg from "@/svg/FrontendSvg";
+import JavascriptSvg from "@/svg/JavascriptSvg";
+import ReactSvg from "@/svg/ReactSvg";
 
 const ItemContainer = ({ title, children }) => {
+  const imageSelector = (title) => {
+    switch (title) {
+      case "CS":
+        return (
+          <Title>
+            <CsSvg></CsSvg>
+            <Text>{title}</Text>
+          </Title>
+        );
+      case "JavaScript":
+        return (
+          <Title>
+            <JavascriptSvg></JavascriptSvg>
+            <Text>{title}</Text>
+          </Title>
+        );
+      case "React":
+        return (
+          <Title>
+            <ReactSvg></ReactSvg>
+            <Text>{title}</Text>
+          </Title>
+        );
+      case "Frontend":
+        return (
+          <Title>
+            <FrontendSvg color="var(--mainText)"></FrontendSvg>
+            <Text>{title}</Text>
+          </Title>
+        );
+      default:
+        return (
+          <Title>
+            <Text>{title}</Text>
+          </Title>
+        );
+    }
+  };
+
   return (
     <Wrapper>
-      <Title>🚀 {title}</Title>
+      {/* <Title>🚀 {title}</Title> */}
+      {imageSelector(title)}
       {children}
     </Wrapper>
   );
@@ -16,6 +61,11 @@ const Wrapper = styled.div`
   margin-bottom: 40px;
 `;
 const Title = styled.h2`
-  font-size: var(--3xl);
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+`;
+const Text = styled.div`
+  font-size: var(--3xl);
+  margin-left: 8px;
 `;
