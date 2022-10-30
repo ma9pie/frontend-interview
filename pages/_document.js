@@ -16,6 +16,7 @@ export default function Document() {
         ></script>
       </Head>
       <body>
+        <div id="alert-modal"></div>
         <Main />
         <NextScript />
       </body>

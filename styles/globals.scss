@@ -22,18 +22,6 @@ a {
 
 /* 다크 모드(기본) */
 :root {
-  // 브랜드 컬러
-  --primaryColor: #fbd538;
-
-  // 배경
-  --bg: #202020;
-  --subBg: #191f28;
-  --overlay: #333333;
-
-  // 텍스트
-  --mainText: #ffffff;
-  --subText: #868d9a;
-
   // font size
   --xs: 0.75rem;
   --sm: 0.875rem;
@@ -66,6 +54,21 @@ a {
   --blue700: #2b6cb0;
   --blue800: #2c5282;
   --blue900: #2a4365;
+
+  // 브랜드 컬러
+  --primaryColor: #fbd538;
+
+  // 배경
+  --bg: #202020;
+  --subBg: #191f28;
+  --overlay: #333333;
+
+  // 텍스트
+  --mainText: #ffffff;
+  --subText: #868d9a;
+
+  // 버튼
+  --button: #2d3138;
 }
 
 /* 라이트 모드 */
@@ -81,6 +84,9 @@ a {
   // 텍스트
   --mainText: #21252f;
   --subText: #868d9a;
+
+  // 버튼
+  --button: #e9eaed;
 }
 
 /* react-modal */

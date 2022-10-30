@@ -2,11 +2,18 @@ import styled from "@emotion/styled";
 import React, { useCallback, useEffect, useRef } from "react";
 import SimpleBar from "simplebar-react";
 
-function ScrollBar(props) {
+function ScrollBar({
+  width,
+  height,
+  maxHeight,
+  setHeight,
+  targetRef,
+  children,
+}) {
   // 창 크기
   const resizeListener = useCallback(() => {
-    props.setHeight(props.targetRef?.current?.offsetHeight);
-  }, [props]);
+    setHeight(targetRef?.current?.offsetHeight);
+  }, []);
 
   // resize 리스너 실행
   useEffect(() => {
@@ -21,7 +28,7 @@ function ScrollBar(props) {
     };
   });
 
-  return <SimpleBar style={{ ...props }}>{props.children}</SimpleBar>;
+  return <SimpleBar style={{ width, height, maxHeight }}>{children}</SimpleBar>;
 }
 
 export default ScrollBar;

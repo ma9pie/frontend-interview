@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import React, { useEffect } from "react";
 import ReactModal from "react-modal";
-import fontStyles from "@/styles/fontStyles";
 
 function AlertModal(props) {
   const unixTime = parseInt(new Date().getTime() / 1000);
@@ -71,7 +70,9 @@ function AlertModal(props) {
           })}
       </ContentBox>
 
-      <ButtonBox></ButtonBox>
+      <ButtonBox>
+        <Button onClick={() => props.onRequestClose()}>확인</Button>
+      </ButtonBox>
     </ReactModal>
   );
 }
@@ -82,8 +83,8 @@ AlertModal.defaultProps = {
   isOpen: false, // 모달을 열고 닫는 변수
   top: "50%", // 모달 top 위치
   left: "50%", // 모달 left 위치
-  padding: "32px ", // 모달 패딩
-  minWidth: "450px", // 최소 너비
+  padding: "24px ", // 모달 패딩
+  minWidth: "320px", // 최소 너비
   title: "알림", // 상단 타이틀
   message: "alert message", // 표시 메시지
   confirmBtnText: "확인", // 버튼 텍스트
@@ -100,13 +101,11 @@ const Top = styled.div`
 `;
 
 const Title = styled.div`
-  ${fontStyles.ExtTitle}
   white-space: nowrap;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 `;
 
 const ContentBox = styled.div`
-  ${fontStyles.Body}
   text-align: center;
 `;
 
@@ -115,8 +114,19 @@ const Text = styled.p`
 `;
 
 const ButtonBox = styled.div`
-  ${fontStyles.ExtButton}
   display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
+  justify-content: center;
+  margin-top: 24px;
+`;
+
+const Button = styled.button`
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: var(--button);
+  & * {
+    background: transparent;
+  }
+  cursor: pointer;
 `;
