@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import Alert from "@/components/common/modal/Alert";
+import Alert from "@/components/common/Modal/Alert";
 
 const ModalUtils = () => {};
 
