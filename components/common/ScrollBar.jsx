@@ -27,7 +27,7 @@ function ScrollBar(props) {
 export default ScrollBar;
 
 ScrollBar.defaultProps = {
-  // width: "100%",
-  // height: "auto",
+  width: "100%",
+  height: "auto",
   setHeight: () => {},
 };

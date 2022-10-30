@@ -48,7 +48,6 @@ const ItemContainer = ({ title, children }) => {
 
   return (
     <Wrapper>
-      {/* <Title>🚀 {title}</Title> */}
       {imageSelector(title)}
       {children}
     </Wrapper>

@@ -5,6 +5,7 @@ import ScrollBar from "@/components/common/ScrollBar";
 import "@/styles/reset.scss";
 import "@/styles/fonts.scss";
 import "@/styles/globals.scss";
+import "@/styles/simplebar.scss";
 
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
