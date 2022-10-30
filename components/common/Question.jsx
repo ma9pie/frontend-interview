@@ -23,7 +23,8 @@ const Wrapper = styled.div`
 `;
 
 const Text = styled.div`
-  line-height: 20px;
+  font-size: var(--lg);
+  line-height: 24px;
   margin-left: 10px;
   word-break: break-all;
   color: ${(props) => props.color};
