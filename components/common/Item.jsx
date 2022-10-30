@@ -12,6 +12,7 @@ const Item = (props) => {
         <Question
           isOpenAnswer={isOpenAnswer}
           question={props.question}
+          answer={props.answer}
         ></Question>
       </QuestionWrapper>
       {isOpenAnswer && (

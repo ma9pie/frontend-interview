@@ -40,17 +40,45 @@ inerview.CS = [
   {
     importance: "5",
     question: "Stack과 Queue의 차이에 대해 설명해주세요.",
-    answer: ``,
+    answer: `[Stack]
+    - 후입선출(LIFO, Last In First Out)
+    - 삽입 연산은 Push, 삭제연산은 Pop
+    예시 : 접시, 브라우저 뒤로가기, 실행취소(ctrl+z)
+
+    [Queue]
+    - 선입선출(FIFO, First In First Out)
+    - 삽입 연산은 Enqueue, 삭제연산은 Dequeue
+    예시 : 은행업무, 놀이기구 대기줄
+    `,
   },
   {
     importance: "5",
-    question: "Map과 Set의 차이점을 설명해주세요.",
-    answer: ``,
+    question: "List, Map, Set의 차이점을 설명해주세요.",
+    answer: `[List]
+    - 순서와 중복이 있는 자료구조
+    - 인덱스로 원소에 접근이 가능
+    - 크기가 가변적
+
+    [Map]
+    - key와 value를 같이 저장할 수 있는 자료구조
+    - key에 대한 중복이 없으며 순서를 보장하지 않음
+    - value의 중복은 허용됨
+    - 검색 속도 빠름
+    
+    [Set]
+    - 순서가 없고, 중복된 데이터를 허용하지 않는 자료구조
+    - 검색 속도 빠름
+    - 중복되지 않은 데이터를 구할 때 유용`,
   },
   {
     importance: "5",
     question: "라이브러리와 프레임워크의 차이점을 설명해주세요.",
-    answer: ``,
+    answer: `라이브러리와 프레임워크의 차이는 제어 흐름에 대한 주도권이 누구 또는 어디에 있는가에 있습니다.
+    
+    프레임워크는 전체적인 흐름을 자체적으로 가지고 있으며, 프로그래머는 그 안에 필요한 코드를 작성합니다.(제어의 역전, IOC) 
+    
+    반면, 라이브러리는 프로그래머가 흐름에 대해 제어를 하며 필요한 상황에 가져다 쓸 수 있습니다.
+    `,
   },
 ];
 
@@ -83,22 +111,46 @@ inerview.JavaScript = [
   {
     importance: "5",
     question: "map과 foreach의 차이를 설명해주세요.",
-    answer: ``,
+    answer: `두 함수 모두 반복문의 역할을 하기위해 사용되는 함수입니다. 
+    차이점은 forEach의 경우 반환값이 undefined이지만, map의 경우 반환값이 있어 새로운 배열을 생성할 수 있습니다.`,
   },
   {
     importance: "5",
     question: "var, let, const의 차이를 설명해주세요.",
-    answer: ``,
+    answer: `[var]
+    - 중복 선언 가능
+    - 함수레벨 스코프
+    [let] 
+    - 중복 선언 불가능
+    - 재할당 가능
+    - 블록레벨 스코프
+    [const] 
+    - 중복 선언 불가능
+    - 재할당 불가능
+    - 블록레벨 스코프`,
   },
   {
     importance: "5",
     question: "함수 선언형과 함수 표현식의 차이를 설명해주세요.",
-    answer: ``,
+    answer: `[함수 선언식]
+    function 함수명() {코드}
+    - 코드가 실행되기전 로드
+    - 호이스팅 됨
+
+    [함수 표현식]
+    var 함수명 = function () {코드}
+    - 인터프리터가 해당 코드줄을 읽을 때 로드
+    - 호이스팅되지않고 정의된 범위에서 로컬 변수의 복사본을 유지할 수 있음
+    - 클로져나 콜백으로 사용 가능
+    `,
   },
   {
     importance: "5",
     question: "호이스팅에 대해 설명해주세요.",
-    answer: ``,
+    answer: `자바스크립트에서는 인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당해줍니다.
+    이로인해 변수 및 함수 선언이 스코프의 최상단으로 끌어 올려진 것 같은 현상이 발생하는데, 이를 호이스팅(Hoisting)이라고 합니다.
+    
+    주의할 점 : 함수 선언식은 호이스팅 되지만, 함수 표현식은 호이스팅 되지 않는다.`,
   },
   {
     importance: "5",
@@ -240,7 +292,12 @@ inerview.Frontend = [
   {
     importance: "5",
     question: "브라우저 렌더링 과정을 설명해주세요.",
-    answer: ``,
+    answer: `1. HTML 파싱 후 DOM(Document Object Model) 트리 구축
+    2. CSS 파싱 후 CSSOM(CSS Object Model) 트리 구축
+    3. script 태그를 만나면 HTML 파싱을 중단하고 Javascript 코드를 파싱
+    4. DOM과 CSSOM을 조합하여 렌더트리(Render Tree) 구축
+    5. 뷰포트 기반으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기 계산(Layout/Reflow 단계)
+    6. 계산한 위치, 크기 기반으로 화면에 그림(Paint 단계)`,
   },
   {
     importance: "5",
@@ -260,7 +317,18 @@ inerview.Frontend = [
   {
     importance: "5",
     question: "Sementic Markup에 대해 설명해주세요.",
-    answer: ``,
+    answer: `시멘틱(Sementic)이란 "의미론적인" 이라는 의미를 가지며 마크업(Markup)은 HTML 태그로 문서를 작성하는 것을 뜻합니다.
+    따라서 시멘틱 마크업이란 의미가 잘 전달되도록 문서를 작성하는 것을 말하는데, 아래와 같이 각 태그가 그 용도에 맞게 사용되어야 합니다.
+
+    - 헤더/푸터에 <header>와 <footer> 사용
+    - 메인 컨텐츠에 <main>과 <section> 사용
+    - 독립적인 컨텐츠에 <article> 사용
+    - 최상위 제목으로 <h1> 사용
+    - 순서가 없는 목록으로 <ul>과 <li> 사용
+    - 네비게이션에 <nav> 사용
+
+    장점 : 검색엔진 최적화(SEO) 및 웹 접근성에 유리, div, span으로만 이루어진 구조보다 가독성이 좋음
+    `,
   },
   {
     importance: "5",
