@@ -85,32 +85,60 @@ inerview.CS = [
 inerview.JavaScript = [
   {
     importance: "5",
-    question: "sync와 async의 차이점을 설명해주세요.",
-    answer: ``,
+    question: "Sync와 Async의 차이점을 설명해주세요.",
+    answer: `
+    동기와 비동기는 특정 작업을 수행할 때 해당 작업의 완료 여부를 신경쓰는지에 따라 구분됩니다.
+
+    [Sync]
+    - 요청을 보낸 후 응답을 기다림
+    - 직렬적 task 수행
+
+    [Async]
+    - 요청의 응답을 기다리지 않고 다음 동작 실행
+    - 병렬적 task 수행
+    `,
   },
   {
     importance: "5",
-    question: "blocking과 non-blocking의 차이를 설명해주세요.",
-    answer: ``,
+    question: "Blocking과 Non-Blocking의 차이를 설명해주세요.",
+    answer: `블로킹과 논블로킹은 작업을 수행할 때 제어권이 누구한테 있는지에 따라 구분됩니다.
+    
+    [Blocking]
+    - 해당 작업이 완료될 때까지 다른 작업 수행 불가
+
+    [Non-Blocking]
+    - 해당 작업이 완료되기 전까지 다른 작업 수행 가능`,
   },
   {
     importance: "5",
-    question: "콜백 함수에 대해 설명해주세요.",
-    answer: ``,
+    question: "콜백함수에 대해 설명해주세요.",
+    answer: `[콜백함수]
+    - 다른 함수의 인자로써 이용되는 함수
+    - 어떤 이벤트에 의해 호출되어지는 함수
+    
+    콜백함수는 다른 함수에 매개변수로 넘겨준 함수를 뜻합니다.`,
   },
   {
     importance: "5",
-    question: "콜백 지옥을 해결하는 방법을 설명해주세요.",
-    answer: ``,
+    question: "콜백지옥의 의미와 콜백지옥을 해결하는 방법을 설명해주세요.",
+    answer: `콜백지옥(Callback Hell)이란 콜백함수를 익명함수로 전달하는 과정에서 또 다시 콜백 안에 함수 호출이 반복되어 코드의 들여쓰기 수준이 감당하기 힘들 정도로 깊어지는 현상을 뜻합니다. 
+    주로 이벤트 처리나 서버 통신과 같은 비동기 작업을 제어하기 위해 사용되는데 이러한 방식은 가독성이 떨어지게 되고 유지보수를 어렵게 만듭니다.
+    
+    - 해결 방법
+    1. 코딩 패턴으로 콜백 익명 함수를 각각의 함수로 분리
+    2. Promise 사용
+    3. Async + Await 사용`,
   },
   {
     importance: "5",
-    question: "promise와 async, await의 차이를 설명해주세요.",
-    answer: ``,
+    question: "Promise와 Async, Await의 차이를 설명해주세요.",
+    answer: `Async, Await 문법은 Promise를 더욱 쉽게 사용할 수 있도록 하는 ES8에서 도입된 비동기 처리 방식 문법입니다.
+    
+    Async, Await을 사용할 경우 코드가 Promise를 사용한 코드보다 간결해지며 동기적인 코드흐름으로 개발이 가능하지만, 에러처리를 위해 try/catch문을 사용해야 합니다.`,
   },
   {
     importance: "5",
-    question: "map과 foreach의 차이를 설명해주세요.",
+    question: "map과 forEach의 차이를 설명해주세요.",
     answer: `두 함수 모두 반복문의 역할을 하기위해 사용되는 함수입니다. 
     차이점은 forEach의 경우 반환값이 undefined이지만, map의 경우 반환값이 있어 새로운 배열을 생성할 수 있습니다.`,
   },

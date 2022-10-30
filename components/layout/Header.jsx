@@ -23,7 +23,7 @@ function Header() {
 export default Header;
 
 const Wrapper = styled.header`
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
