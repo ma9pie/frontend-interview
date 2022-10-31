@@ -7,7 +7,7 @@ import Header from "@/components/layout/Header";
 
 function CommonLayout(props) {
   return (
-    <Container ref={ref}>
+    <Container>
       <Head></Head>
       <Header></Header>
       <Body>
@@ -25,8 +25,4 @@ const Container = styled.div`
   min-height: 100%;
   width: 100%;
 `;
-const Body = styled.div`
-  position: absolute;
-  top: 60px;
-  width: 100%;
-`;
+const Body = styled.div``;
