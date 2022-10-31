@@ -106,3 +106,8 @@ a {
 .ReactModal__Content--after-open {
   overflow: visible !important;
 }
+
+/* react-collapse */
+.ReactCollapse--collapse {
+  transition: height 0.5s ease;
+}
