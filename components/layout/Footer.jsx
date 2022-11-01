@@ -12,17 +12,14 @@ function Footer(props) {
 export default Footer;
 
 const Wrapper = styled.footer`
-  position: absolute;
   width: 100%;
   height: 40px;
   padding: 0px 20px;
-  bottom: 0px;
   background-color: var(--subBg);
   & * {
     background-color: inherit;
   }
 `;
-
 const Copyright = styled.p`
   font-size: var(--xs);
   text-align: right;
