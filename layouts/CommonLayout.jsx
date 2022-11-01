@@ -7,14 +7,14 @@ import Header from "@/components/layout/Header";
 
 function CommonLayout(props) {
   return (
-    <ScrollBar height="100vh">
-      <Container>
-        <Head></Head>
-        <Header></Header>
+    <Container>
+      <Head></Head>
+      <Header></Header>
+      <ScrollBar height="calc(100vh - 100px)">
         <Body>{props.children} </Body>
-        <Footer></Footer>
-      </Container>
-    </ScrollBar>
+      </ScrollBar>
+      <Footer></Footer>
+    </Container>
   );
 }
 
@@ -22,5 +22,5 @@ export default CommonLayout;
 
 const Container = styled.div``;
 const Body = styled.div`
-  min-height: calc(100vh - 100px);
+  min-height: calc(100% - 100px);
 `;
