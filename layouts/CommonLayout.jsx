@@ -10,10 +10,10 @@ function CommonLayout(props) {
     <Container>
       <Head></Head>
       <Header></Header>
-      <ScrollBar height="calc(100vh - 60px)">
-        <Body>{props.children} </Body>
-        <Footer></Footer>
-      </ScrollBar>
+      <Body>
+        <ScrollBar maxHeight="calc(100vh - 100px)">{props.children}</ScrollBar>
+      </Body>
+      <Footer></Footer>
     </Container>
   );
 }
