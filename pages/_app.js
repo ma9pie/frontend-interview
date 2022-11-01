@@ -19,14 +19,12 @@ function App({ Component, pageProps }) {
 
   const updateViewHeight = () => {
     const vh = window.innerHeight * 0.01;
-    // document.documentElement.style.setProperty('--vh', `${vh}px`);
-    setViewHeight(`${vh}px`);
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    // setViewHeight(`${vh}px`);
   };
 
-  console.log(viewHeight);
-
   return (
-    <Overlay viewHeight={viewHeight}>
+    <Overlay>
       <Content>{getLayout(<Component {...pageProps} />)}</Content>
     </Overlay>
   );
@@ -37,8 +35,7 @@ export default App;
 const Overlay = styled.div`
   background-color: var(--overlay);
   height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
-  height: ${(props) => `calc(var(${props.viewHeight}, 1vh) * 100)`};
+  height: calc(var(--vh, 1vh) * 100);
 `;
 const Content = styled.div`
   min-width: 360px;
