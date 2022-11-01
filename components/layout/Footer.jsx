@@ -15,6 +15,7 @@ const Wrapper = styled.footer`
   width: 100%;
   height: 40px;
   padding: 0px 20px;
+  margin-top: auto;
   background-color: var(--subBg);
   & * {
     background-color: inherit;

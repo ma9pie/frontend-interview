@@ -10,7 +10,6 @@ function CommonLayout(props) {
     <Container>
       <Head></Head>
       <Header></Header>
-
       <ScrollBar height="calc(100vh - 60px)">
         <Body>{props.children}</Body>
         <Footer></Footer>
@@ -23,6 +22,5 @@ export default CommonLayout;
 
 const Container = styled.div`
   position: relative;
-  padding-top: 60px;
 `;
 const Body = styled.div``;
