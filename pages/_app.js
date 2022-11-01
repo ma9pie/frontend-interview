@@ -1,7 +1,5 @@
-import { Global } from "@emotion/react";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
-import ScrollBar from "@/components/common/ScrollBar";
 import "@/styles/reset.scss";
 import "@/styles/fonts.scss";
 import "@/styles/globals.scss";
