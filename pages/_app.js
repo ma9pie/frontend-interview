@@ -29,24 +29,4 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   margin: 0px auto;
-
-  /* overflow-y: scroll;
-  overflow-x: hidden; */
-
-  /* overflow-y: scroll;
-  overflow-x: hidden;
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-  &::-webkit-scrollbar:horizontal {
-    display: none;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 5px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #4f0d92;
-    border-radius: 5px;
-  } */
 `;

@@ -22,7 +22,8 @@ export default CommonLayout;
 
 const Container = styled.div`
   position: relative;
-  min-height: 100%;
-  width: 100%;
+  padding-top: 60px;
 `;
-const Body = styled.div``;
+const Body = styled.div`
+  height: calc(100% - 100px);
+`;
