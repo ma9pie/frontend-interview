@@ -10,11 +10,10 @@ function CommonLayout(props) {
     <Container>
       <Head></Head>
       <Header></Header>
-      <ScrollBar height="calc(100vh - 60px)">
-        <Body>{props.children}</Body>
-        <Test></Test>
-        <Footer></Footer>
-      </ScrollBar>
+      <Body>
+        <ScrollBar height="calc(100vh - 100px)">{props.children}</ScrollBar>
+      </Body>
+      <Footer></Footer>
     </Container>
   );
 }
@@ -22,9 +21,11 @@ function CommonLayout(props) {
 export default CommonLayout;
 
 const Container = styled.div`
+  position: relative;
   height: 100%;
 `;
 const Body = styled.div`
-  min-height: calc(100vh - 100px);
+  position: absolute;
+  top: 60px;
+  width: 100%;
 `;
-const Test = styled.div``;

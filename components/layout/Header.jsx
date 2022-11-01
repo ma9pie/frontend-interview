@@ -23,16 +23,18 @@ function Header(props) {
 export default Header;
 
 const Wrapper = styled.header`
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0px;
+  width: 100%;
   height: 60px;
   padding: 0px 20px;
   background: linear-gradient(-45deg, #ef32d9, #89fffd);
   & * {
     background: transparent;
   }
-  z-index: 2;
 `;
 
 const Icon = styled.div`
