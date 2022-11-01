@@ -10,10 +10,10 @@ function CommonLayout(props) {
     <Container>
       <Head></Head>
       <Header></Header>
-      <ScrollBar height="calc(100vh - 100px)">
+      <ScrollBar height="calc(100vh - 60px)">
         <Body>{props.children} </Body>
+        <Footer></Footer>
       </ScrollBar>
-      <Footer></Footer>
     </Container>
   );
 }
@@ -22,5 +22,5 @@ export default CommonLayout;
 
 const Container = styled.div``;
 const Body = styled.div`
-  min-height: calc(100% - 100px);
+  min-height: calc(100vh - 100px);
 `;
