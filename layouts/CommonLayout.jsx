@@ -6,13 +6,28 @@ import Head from "@/components/layout/Head";
 import Header from "@/components/layout/Header";
 
 function CommonLayout(props) {
-  useEffect(() => {}, []);
+  const [innerHeight, setinnerHeight] = useState(1000);
+
+  useEffect(() => {
+    setHeight();
+    window.addEventListener("resize", setHeight);
+    return () => {
+      window.removeEventListener("resize", setHeight);
+    };
+  });
+
+  const setHeight = () => {
+    setinnerHeight(window.innerHeight);
+  };
+
   return (
     <Container>
       <Head></Head>
       <Header></Header>
       <Body>
-        <ScrollBar maxHeight="calc(100vh - 100px)">{props.children}</ScrollBar>
+        <ScrollBar maxHeight={`${innerHeight - 100}px`}>
+          {props.children}
+        </ScrollBar>
       </Body>
       <Footer></Footer>
     </Container>
