@@ -11,6 +11,25 @@ export default function Document() {
           content="0ATr3A6QdCZG5gVNu2lZep3W5w7d3aKLynPPdcKH370"
         />
         <link rel="icon" href="/public/favicon.ico" />
+        {/* 구글 애널리틱스 */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+        />
+        <script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         {/* 다크모드 시 화면 깜빡임 제거 */}
         <script
           dangerouslySetInnerHTML={{
