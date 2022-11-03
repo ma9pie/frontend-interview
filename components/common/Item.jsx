@@ -6,7 +6,7 @@ import Answer from "@/components/common/Answer";
 import Question from "@/components/common/Question";
 
 const Item = (props) => {
-  const [isOpenAnswer, setIsOpenAnswer] = useState(false);
+  const [isOpenAnswer, setIsOpenAnswer] = useState(true);
 
   return (
     <Wrapper>
