@@ -6,6 +6,7 @@ import Head from "@/components/layout/Head";
 import Header from "@/components/layout/Header";
 
 function CommonLayout(props) {
+  useEffect(() => {}, []);
   return (
     <Container>
       <Head></Head>
