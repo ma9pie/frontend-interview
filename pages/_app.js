@@ -8,6 +8,19 @@ import "@/styles/simplebar.scss";
 function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
+  const setHeight = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty("--vh", `${window.innerHeight}px`);
+  };
+
+  useEffect(() => {
+    setHeight();
+    window.addEventListener("resize", setHeight);
+    return () => {
+      window.removeEventListener("resize", setHeight);
+    };
+  });
+
   return (
     <Overlay>
       <Content>{getLayout(<Component {...pageProps} />)}</Content>

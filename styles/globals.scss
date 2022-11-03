@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
+  height: var(--vh);
 }
 
 a {
@@ -22,6 +24,8 @@ a {
 
 /* 다크 모드(기본) */
 :root {
+  --vh: 100%;
+
   // font size
   --xs: 0.75rem;
   --sm: 0.875rem;
