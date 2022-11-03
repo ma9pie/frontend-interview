@@ -26,5 +26,5 @@ const Container = styled.div`
   position: relative;
 `;
 const Body = styled.div`
-  min-height: calc(100vh - 100px);
+  min-height: calc(var(--vh) - 100px);
 `;
