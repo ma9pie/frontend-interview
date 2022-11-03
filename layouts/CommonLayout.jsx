@@ -6,12 +6,8 @@ import Head from "@/components/layout/Head";
 import Header from "@/components/layout/Header";
 
 function CommonLayout(props) {
-  const scrollInto = useRef(null);
-  useEffect(() => {
-    scrollInto.current.scrollIntoView();
-  });
   return (
-    <Container ref={scrollInto}>
+    <Container>
       <Head></Head>
       <Header></Header>
       <Body>
