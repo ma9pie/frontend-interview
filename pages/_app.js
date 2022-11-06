@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import GoogleAnalyticsUtils from "@/utils/GoogleAnalyticsUtils";
 import "@/styles/reset.scss";
 import "@/styles/fonts.scss";
 import "@/styles/globals.scss";
