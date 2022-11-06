@@ -10,7 +10,6 @@ export default function Document() {
           name="google-site-verification"
           content="0ATr3A6QdCZG5gVNu2lZep3W5w7d3aKLynPPdcKH370"
         />
-        <link rel="icon" href="/public/favicon.ico" />
         {/* 구글 애널리틱스 */}
         <script
           async
