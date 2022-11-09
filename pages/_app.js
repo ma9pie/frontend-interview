@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Analytics } from "@vercel/analytics/react";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import GoogleAnalyticsUtils from "@/utils/GoogleAnalyticsUtils";
@@ -38,6 +39,7 @@ function App({ Component, pageProps }) {
 
   return (
     <Overlay>
+      <Analytics />
       <Content>{getLayout(<Component {...pageProps} />)}</Content>
     </Overlay>
   );
