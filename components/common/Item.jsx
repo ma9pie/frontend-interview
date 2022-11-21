@@ -46,7 +46,7 @@ const Item = (props) => {
 export default Item;
 
 const Wrapper = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 `;
 const QuestionWrapper = styled.span`
   cursor: pointer;

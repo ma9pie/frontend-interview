@@ -14,7 +14,7 @@ const Answer = (props) => {
 export default Answer;
 
 const Wrapper = styled.div``;
-const Text = styled.div`
+const Text = styled.p`
   font-size: var(--base);
   color: var(--subText);
   line-height: 24px;
