@@ -158,6 +158,25 @@ inerview.JavaScript = [
   },
   {
     importance: "5",
+    question: "일반 함수와 화살표 함수의 차이",
+    answer: `[일반 함수]
+    - 함수 호출방식에 따라 this에 바인딩할 객체가 동적으로 결정됨
+    - new 키워드를 통해 constructor 함수로 사용 가능
+    - 함수 실행시 암묵적으로 arguments 변수가 전달되어 사용 가능
+
+    [화살표 함수]
+    화살표 함수는 ES6부터 도입된 함수로 function 키워드 대신 화살표 => 를 사용해 좀 더 간략하게 함수를 정의할 수 있는 방식입니다.
+    - prototype property가 없기 때문에 new 키워드를 사용하여 constructor 함수로 사용할 수 없음
+    - arguments 객체를 생성하지 않음
+    - 화살표 함수의 this는 언제나 상위 스코프의 this(Lexical this)를 가리키며, this에 바인딩 할 객체가 정적으로 결정됨`,
+  },
+  {
+    importance: "5",
+    question: "this의 의미를 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
     question: "함수 선언형과 함수 표현식의 차이를 설명해주세요.",
     answer: `[함수 선언식]
     function 함수명() {코드}
@@ -165,11 +184,10 @@ inerview.JavaScript = [
     - 호이스팅 됨
 
     [함수 표현식]
-    var 함수명 = function () {코드}
+    const 함수명 = function () {코드}
     - 인터프리터가 해당 코드줄을 읽을 때 로드
     - 호이스팅되지않고 정의된 범위에서 로컬 변수의 복사본을 유지할 수 있음
-    - 클로져나 콜백으로 사용 가능
-    `,
+    - 클로져나 콜백으로 사용 가능`,
   },
   {
     importance: "5",
@@ -262,11 +280,6 @@ inerview.JavaScript = [
     answer: `깊은복사의 경우 새로운 메모리 공간을 확보하여 완전히 복사하는 것을 의미합니다.
     반면, 얕은복사의 경우 참조 타입 데이터가 저장한 메모리 주소값을 복사하는 것을 의미합니다.
     따라서 얕은복사 후 원시값과 복사된 값 모두 똑같은 참조를 가리키고 있기 때문에 복사된 값을 수정할 시 원시값에 영향을 끼치게 되므로 주의해야 합니다.`,
-  },
-  {
-    importance: "5",
-    question: "this의 의미를 설명해주세요.",
-    answer: ``,
   },
   {
     importance: "5",
@@ -464,8 +477,7 @@ inerview.Frontend = [
     - 순서가 없는 목록으로 <ul>과 <li> 사용
     - 네비게이션에 <nav> 사용
 
-    장점 : 검색엔진 최적화(SEO) 및 웹 접근성에 유리, div, span으로만 이루어진 구조보다 가독성이 좋음
-    `,
+    장점 : 검색엔진 최적화(SEO) 및 웹 접근성에 유리, div, span으로만 이루어진 구조보다 가독성이 좋음`,
   },
   {
     importance: "5",
