@@ -66,6 +66,11 @@ const list = [
   },
   {
     importance: "5",
+    question: "React Hooks에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
     question: "React lifecycle에 대해 설명해주세요.",
     answer: ``,
   },
@@ -108,6 +113,11 @@ const list = [
   {
     importance: "5",
     question: "전역 상태 관리 방법에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
+    question: "Props drilling에 대해 설명해주세요.",
     answer: ``,
   },
 ];

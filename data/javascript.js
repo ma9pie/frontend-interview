@@ -94,7 +94,13 @@ const list = [
   {
     importance: "5",
     question: "this의 의미를 설명해주세요.",
-    answer: ``,
+    answer: `this는 자신이 속한 객체 또는 자신이 생성할 인스턴스를 가리키는 자기 참조 변수이며, 함수의 호출 방식에 따라 특정 객체를 바인딩하게 됩니다.
+
+    1. 생성자 함수 내부에서 this는 생성자 함수가 생성할 인스턴스와 바인딩 됩니다.
+    2. Call, Apply, Bind 메소드 사용 시, 함수의 첫 번째 인수로 전달하는 객체에 바인딩됩니다.
+    3. Object.method 형태와 같이 객체 내에서 호출할 경우, this는 해당 객체와 바인딩됩니다.
+    4. 위 3가지를 제외한 일반 함수 호출의 경우 this는 전역 객체와 바인딩 됩니다.
+    5. 화살표 함수 내에서 this가 사용될 경우, this는 상위 스코프의 this와 바인딩 됩니다.`,
   },
   {
     importance: "5",
@@ -241,6 +247,26 @@ const list = [
   {
     importance: "5",
     question: "null, undefined, undeclared, NaN에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
+    question: "mutable과 immutable에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
+    question: "throttle과 debounce에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
+    question: "iterator와 generator에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
+    question: "이벤트 루프(Event loop)에 대해 설명해주세요.",
     answer: ``,
   },
 ];
