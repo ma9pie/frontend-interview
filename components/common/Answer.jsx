@@ -16,7 +16,7 @@ export default Answer;
 const Wrapper = styled.div``;
 const Text = styled.p`
   font-size: var(--base);
-  color: var(--subText);
+  color: var(--sub);
   line-height: 24px;
   min-height: 24px;
   word-break: break-all;

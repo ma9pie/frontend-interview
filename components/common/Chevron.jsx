@@ -1,11 +1,3 @@
-/**
- * [Title] 꺽쇠 모양의 화살표 <, >
- * [Description] props로 type("up","down","left","right")를 주면
- * 해당 방향의 꺽쇠 모양의 화살표를 반환
- * [Usage]
- * @props fill로 화살표 색 지정 가능. default는 var(--mainText)
- * [Referrence] bootstrap icon's HTML
- */
 import styled from "@emotion/styled";
 import React from "react";
 
@@ -43,7 +35,7 @@ export default Chevron;
 Chevron.defaultProps = {
   width: "17px", // 너비
   height: "12px", // 높이
-  fill: "var(--mainText)", // 색
+  fill: "var(--main)", // 색
   margin: "0px",
 };
 const Wrapper = styled.div`

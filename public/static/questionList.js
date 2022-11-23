@@ -288,8 +288,19 @@ inerview.JavaScript = [
   },
   {
     importance: "5",
+    question: "spread 문법과 rest 문법의 차이에 대해 설명해주세요.",
+    answer: `spread 문법은 객체나 배열의 데이터를 풀어놓는 역할을 하고 rest 문법은 spread 문법과 반대로 전달받은 데이터를 배열 또는 객체 안에 채워넣는 역할을 합니다.`,
+  },
+  {
+    importance: "5",
     question: "ES6에서 생긴 큰 변화들에 대해 설명해주세요.",
     answer: ``,
+  },
+  {
+    importance: "5",
+    question: "Ajax에 대해 설명해주세요.",
+    answer: `Ajax란 Asynchronous Javascript And XML의 약자로,
+     브라우저가 가지고 있는 XMLHttpRequest 객체를 이용해서 서버와 브라우저가 비동기 방식으로 데이터를 교환할 수 있는 통신 기능입니다.`,
   },
   {
     importance: "5",

@@ -33,7 +33,7 @@ const ItemContainer = ({ title, children }) => {
       case "Frontend":
         return (
           <Title>
-            <FrontendSvg color="var(--mainText)"></FrontendSvg>
+            <FrontendSvg color="var(--main)"></FrontendSvg>
             <Text>{title}</Text>
           </Title>
         );

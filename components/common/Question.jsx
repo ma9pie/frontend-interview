@@ -7,13 +7,11 @@ const Question = (props) => {
     <Wrapper>
       <Chevron
         type={props.isOpenAnswer ? "up" : "down"}
-        fill={props.isOpenAnswer ? "var(--mainText)" : "var(--subText)"}
+        fill={props.isOpenAnswer ? "var(--main)" : "var(--sub)"}
       ></Chevron>
       <Text
         color={
-          props.isOpenAnswer || props.answer
-            ? "var(--mainText)"
-            : "var(--subText)"
+          props.isOpenAnswer || props.answer ? "var(--main)" : "var(--sub)"
         }
       >
         {props.question}

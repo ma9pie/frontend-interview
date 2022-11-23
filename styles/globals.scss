@@ -15,7 +15,7 @@ a {
 
 * {
   background-color: var(--bg);
-  color: var(--mainText);
+  color: var(--main);
   font-family: "NotoSansKR";
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -67,8 +67,8 @@ a {
   --overlay: #333333;
 
   // 텍스트
-  --mainText: #ffffff;
-  --subText: #868d9a;
+  --main: #ffffff;
+  --sub: #868d9a;
 
   // 버튼
   --button: #2d3138;
@@ -85,8 +85,8 @@ a {
   --overlay: #e5e5e5;
 
   // 텍스트
-  --mainText: #21252f;
-  --subText: #868d9a;
+  --main: #21252f;
+  --sub: #868d9a;
 
   // 버튼
   --button: #e9eaed;

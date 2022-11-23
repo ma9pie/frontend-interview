@@ -6,8 +6,8 @@ import Question from "@/components/common/Question";
 
 const Item = (props) => {
   const ref = useRef();
-  const [height, setHeight] = useState("auto");
-  const [isOpenAnswer, setIsOpenAnswer] = useState(true);
+  const [height, setHeight] = useState("0px");
+  const [isOpenAnswer, setIsOpenAnswer] = useState(false);
 
   const collapse = () => {
     const target = ref.current;
@@ -55,5 +55,5 @@ const AnswerWrapper = styled.div`
   margin: 8px;
   transition: all 0.3s ease;
   overflow: hidden;
-  height: ${(props) => props.height}; ;
+  height: ${(props) => props.height};
 `;
