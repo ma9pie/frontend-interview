@@ -283,10 +283,14 @@ inerview.JavaScript = [
   },
   {
     importance: "5",
+    question: "구조 분해 할당(destructuring) 대해 설명해주세요.",
+    answer: `객체, 배열의 값을 추출해서 변수에 바로 할당할 수 있는 ES6에서 도입된 편리한 문법입니다.`,
+  },
+  {
+    importance: "5",
     question: "ES6에서 생긴 큰 변화들에 대해 설명해주세요.",
     answer: ``,
   },
-
   {
     importance: "5",
     question: "import와 require의 차이점에 대해 설명해주세요.",
