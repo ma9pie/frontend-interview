@@ -6,16 +6,6 @@ const list = [
   },
   {
     importance: "5",
-    question: "DNS에 대해 설명해주세요.",
-    answer: ``,
-  },
-  {
-    importance: "5",
-    question: "REST API에 대해 설명해주세요.",
-    answer: ``,
-  },
-  {
-    importance: "5",
     question: "브라우저 렌더링 과정을 설명해주세요.",
     answer: `1. HTML 파싱 후 DOM(Document Object Model) 트리 구축
   2. CSS 파싱 후 CSSOM(CSS Object Model) 트리 구축
@@ -24,6 +14,17 @@ const list = [
   5. 뷰포트 기반으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기 계산(Layout/Reflow 단계)
   6. 계산한 위치, 크기 기반으로 화면에 그림(Paint 단계)`,
   },
+  {
+    importance: "5",
+    question: "DNS에 대해 설명해주세요.",
+    answer: ``,
+  },
+  {
+    importance: "5",
+    question: "REST API에 대해 설명해주세요.",
+    answer: ``,
+  },
+
   {
     importance: "5",
     question: "Webpack, Babel, Polyfill에 대해 설명해주세요.",

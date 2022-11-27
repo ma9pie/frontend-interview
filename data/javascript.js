@@ -387,6 +387,28 @@ const list = [
     generator를 통해서 iterator를 만들 수 있고 함수 안에서 값을 순회할 수 있습니다.
     제너레이터 선언은 함수 선언문에 *(Asterisk)를 붙여 선언합니다.`,
   },
+  {
+    importance: "5",
+    question: "자바스크립트 동작 원리에 대해 설명해주세요.",
+    answer: `자바스크립트는 싱글 쓰레드 기반의 언어이며, V8 엔진을 사용합니다. V8 엔진의 경우 크게 메모리 힙(Memory heap)과 콜 스택(Call stack) 두 요소로 구성되어 있습니다.
+
+    [Memory heap]
+    메모리 할당이 이뤄지는 곳입니다.
+
+    [Call Stack]
+    코드가 실행될 때 호출 스택이 쌓이는 곳입니다.
+    
+    [Web APIs]
+    콜 스택에서 실행된 비동기 함수는 Web API를 호출하고, Web API는 콜백 함수를 콜백 큐에 밀어 넣습니다.
+    Web API에는 DOM, Ajax, SetTimeout 등등이 존재합니다.
+    
+    [Callback Queue]
+    함수를 저장하는 자료구조로, 선입선출 형식으로 함수를 처리합니다. 
+    TaskQueue라고도 불립니다.
+    
+    [Event Loop]
+    이벤트 루프는 콜 스택이 다 비워지면 콜백 큐에 존재하는 함수들을 하나씩 콜 스택에 옮기는 역할을 합니다.`,
+  },
 ];
 
 export default list;
