@@ -281,42 +281,111 @@ const list = [
   {
     importance: "5",
     question: "import와 require의 차이점에 대해 설명해주세요.",
-    answer: ``,
+    answer: `import와 require는 둘다 외부 파일이나 라이브러리의 코드를 불러오는 역할을 하지만, 다른 문법적 구조를 가지고 있습니다. 또한 하나의 프로그램에서 두 키워드를 동시에 사용할 수 없습니다.
+
+    [require]
+    - NodeJS에서 사용되고 있는 CommonJS의 키워드
+    - 프로그램의 어느 지점에서나 호출 가능
+    - 복수객체 내보내기
+    => exports.객체명 = 객체명
+    - 단일객체 내보내기
+    => module.exports = 객체명
+
+    [import]
+    - ES6에서 새롭게 도입된 키워드
+    - 필요한 모듈 부분만 선택하여 로드할 수 있기 때문에 require문 보다 성능이 우수하며 메모리 절약
+    - 복수객체 내보내기
+    => export { 객체명 }
+    - 단일객체 내보내기
+    => export default`,
   },
   {
     importance: "5",
-    question: "package.json의 역할에 대해 설명해주세요.",
-    answer: ``,
+    question: "npm에 대해 설명해주세요.",
+    answer: `Node Package Maneger의 약자로, Node.js에서 상요하는 패키지를 다운 받을 수 있는 프로그램입니다.`,
+  },
+  {
+    importance: "5",
+    question: "package.json과 package-lock.json의 역할에 대해 설명해주세요.",
+    answer: `[package.json]
+    현재 프로젝트에 관한 정보와 패키지 매니저(npm, yarn)을 통해 설치한 모듈들의 의존성을 관리하는 파일입니다.
+    
+    [package-lock.json]
+    package.json에 선언된 패키지가 설치될 때 정확한 version과 dependency가 설치되도록 해줍니다.`,
   },
   {
     importance: "5",
     question: "typescript를 쓰는 이유에 대해 설명해주세요.",
-    answer: ``,
+    answer: `타입스크립트란 MS에서 개발하고 관리하는 오픈소스 프로그래밍 언어이며, 자바스크립트의 단점을 해결하기 위해 만들어진 언어입니다. 
+
+    - Type Error 방지(컴파일 단계에서 오류 포착)
+    - 명시적인 정적 타입 지정으로 코드 가독성을 높이고 디버깅을 쉽게 할 수 있음
+    - 코드 자동 완성 및 가이드
+    - class와 interface의 특징을 지원함으로서 객체지향 프로그래밍 환경을 제공`,
   },
   {
     importance: "5",
     question: "null, undefined, undeclared, NaN에 대해 설명해주세요.",
-    answer: ``,
+    answer: `null : 사용자가 null값을 변수에 할당한 경우(빈 값이라는 의미)
+
+    undefined : 변수를 선언하고 값을 할당하기 전의 값이며, 변수에 값이 할당되어 있지 않은 상태
+
+    undeclared : 변수가 선언조자 되지 않은 경우
+
+    NaN : "Not a Number"의 약어이며, 컴퓨터에서 숫자로 나타낼 수 없을 때 나타내는 표시`,
+  },
+  {
+    importance: "5",
+    question: "자바스크립트 데이터 타입에 대해 설명해주세요.",
+    answer: `[원시 타입(primitive data type)]
+    - boolean
+    - null
+    - undefined
+    - number
+    - string
+    - symbol(ES6에서 추가)
+
+    [객체/참조 타입(object/reference type)]
+    - object`,
   },
   {
     importance: "5",
     question: "mutable과 immutable에 대해 설명해주세요.",
-    answer: ``,
+    answer: `[mutable]
+    - 변경 가능한 변수의 유형
+    - 참조 타입
+    - 해당 데이터 주소를 찾아서 값을 변경함
+    mutable methods : pop, push, unshift, shift, splice, fill, reverse, sort 등등
+    
+    [immutable]
+    - 변경이 불가한 변수의 유형
+    - 원시 타입
+    - 해당 데이터 주소와 별개의 새로운 주소에 값이 할당됨
+    immutable methods : concat, filter, find, forEach, includes, indexOf, map, join 등등
+    (slice, replace, split 등등 문자열 메서드의 경우 전부 immutable methods)`,
   },
   {
     importance: "5",
     question: "throttle과 debounce에 대해 설명해주세요.",
-    answer: ``,
+    answer: `DOM 이벤트를 기반으로 실행하는 JavaScript의 성능을 고려하여 이벤트를 제어 및 제한하는 방법입니다.
+    
+    throttle : 이벤트를 일정 주기마다 처리하여 이벤트를 제어하는 방식
+    
+    debounce : 연속적으로 발생하는 이벤트들을 그룹화하여 하나의 이벤트만 실행되도록 처리하는 방식`,
   },
   {
     importance: "5",
-    question: "iterator와 generator에 대해 설명해주세요.",
-    answer: ``,
-  },
-  {
-    importance: "5",
-    question: "이벤트 루프(Event loop)에 대해 설명해주세요.",
-    answer: ``,
+    question: "iterable, iterator, generator에 대해 설명해주세요.",
+    answer: `[이터러블(iterable)]
+    순회 가능한 객체를 의미합니다.
+
+    [이터레이터(iterator)]
+    반복을 위해 설계된 특정 인터페이스가 있는 객체이며, {value, done}을 반환하고 next() 메서드를 가집니다.
+
+    [제너레이터(generator)]
+    iterator 객체를 반환하며, iterable을 생성하는 함수입니다. 
+    generator를 통해서 iterator를 만들 수 있고 함수 안에서 값을 순회할 수 있습니다.
+    제너레이터 선언은 함수 선언문에 *(Asterisk)를 붙여 선언합니다.`,
   },
 ];
 
