@@ -61,13 +61,40 @@ const list = [
   },
   {
     importance: "5",
-    question: "State와 Props의 차이를 설명해주세요.",
-    answer: ``,
+    question: "state와 props의 차이를 설명해주세요.",
+    answer: `[state]
+    컴포넌트에서 사용하고 관리할 수 있는 상태값입니다.
+    setState 또는useState로 상태값 변경 시 리렌더링이 일어납니다.
+
+    [props]
+    부모 컴포넌트에서 자식 컴포넌트로 상속하는 데이터 값으로 읽기 전용 데이터입니다.`,
+  },
+  {
+    importance: "5",
+    question: "자식 컴포넌트에서 props를 변경할 수 있나요?",
+    answer: `부모 컴포넌트로 부터 상속받는 props는 읽기전용 값으로 직접 변경 및 수정은 불가능합니다.
+    
+    하지만 부모 컴포넌트로 부터 해당 state를 변경하는 setState 함수를 props로 전달받아 해당 함수를 호출하면 props 값을 변경할 수 있습니다.`,
   },
   {
     importance: "5",
     question: "React Hooks에 대해 설명해주세요.",
-    answer: ``,
+    answer: `React Hooks는 v16.8에 도입된 기능이며, 기존 클래스형 컴포넌트에서만 가능했던 상태 관리, 라이프 사이클 기능 등을 함수형 컴포넌트에서도 사용이 가능하게 되었습니다.
+    
+    [기본 Hook]
+    - useState : 컴포넌트의 state(상태)를 관리
+    - useEffect : 컴포넌트가 렌더링 될때마다 특정 작업(side effect)을 실행할 수 있으며, 클래스형 컴포넌트에서 사용하던 Lifecycle Method를 대체하는 hook
+    - useContext : 전역에서 사용할 수 있는 context를 가져오는 hook
+
+    [추가 Hook]
+    - useReducer : 여러개의 상태 관리를 할 때 사용하며, 컴포넌트의 상태 업데이트 로직을 컴포넌트에서 분리시킬 수 있는 hook 
+    - useRef : ref 객체를 생성하고, 특정 DOM에 접근하여 DOM 조작을 가능하게 하는 hook
+    - forwardRef : 부모 컴포넌트에서 자식 컴포넌트로 ref를 전달하는 hook
+    - useImperativeHandle
+    - useMemo : 메모제이션된 연산 값을 반환
+    - useCallback : 메모제이션된 콜백을 반환
+    - useLayoutEffect
+    - useDebugValue`,
   },
   {
     importance: "5",
