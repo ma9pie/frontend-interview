@@ -196,7 +196,7 @@ const list = [
     importance: "5",
     question: "프로토타입과 프로토타입 체인에 대해 설명해주세요.",
     answer: `[프로토타입]
-    자바스크립트의 모든 객체는 프로토타입(prototype)이라는 객체를 가지고 있는데, 모든 객체는 그들의 프로토타입으로부터 property와 method를 상속받습니다.
+    자바스크립트는 프로토타입 기반의 언어이며, 프로토타입이란 객체의 원형을 뜻합니다. 즉, 모든 객체는 프로토타입(prototype)이라는 객체를 가지고 각각의 프로토타입으로부터 property와 method를 상속받습니다.
     
     [프로토타입 체인]
     자바스크립트는 특정 객체의 property나 method에 접근하려고 할 때, 해당 property나 method가 없을 시 [[Prototype]]이 가리키는 링크를 따라 자신의 부모 역할을 하는 프로토타입 객체의 property나 method를 차례대로 검색합니다. 이를 프로토타입 체인(prototype chain)이라고 합니다.`,
@@ -302,7 +302,7 @@ const list = [
   {
     importance: "5",
     question: "npm에 대해 설명해주세요.",
-    answer: `Node Package Maneger의 약자로, Node.js에서 상요하는 패키지를 다운 받을 수 있는 프로그램입니다.`,
+    answer: `Node Package Maneger의 약자로, Node.js에서 사용하는 패키지를 다운 받을 수 있는 프로그램입니다.`,
   },
   {
     importance: "5",
