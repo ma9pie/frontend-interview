@@ -90,11 +90,16 @@ const list = [
     - useReducer : 여러개의 상태 관리를 할 때 사용하며, 컴포넌트의 상태 업데이트 로직을 컴포넌트에서 분리시킬 수 있는 hook 
     - useRef : ref 객체를 생성하고, 특정 DOM에 접근하여 DOM 조작을 가능하게 하는 hook
     - forwardRef : 부모 컴포넌트에서 자식 컴포넌트로 ref를 전달하는 hook
-    - useImperativeHandle
+    - useImperativeHandle : 상위 컴포넌트에서 하위컴포넌트의 함수를 호출하거나 값에 접근할때 사용하는 hook
     - useMemo : 메모제이션된 연산 값을 반환
     - useCallback : 메모제이션된 콜백을 반환
-    - useLayoutEffect
-    - useDebugValue`,
+    - useLayoutEffect : useEffect와 비슷하지만, DOM이 화면에 그려지고 호출되는 useEffect와는 달리 DOM이 화면에 그려지기 전에 호출되는 hook
+    - useDebugValue : 사용자 지정 Label을 hook에 할당하여 디버깅에 도움을 주는 hook
+    
+    [React 18]
+    - useId : 클라이언트와 서버측 hydration의 mismatch를 피하면서 고유 id를 생성하는 hook
+    - useTranstion : 특정 상태의 업데이트 우선순위를 낮추어 UI 응답성을 개선
+    - useDeferredValue : UI의 일부 업데이트를 연기할 수 있는 hook`,
   },
   {
     importance: "5",
@@ -104,12 +109,32 @@ const list = [
   {
     importance: "5",
     question: "useState에 대해 설명해주세요.",
-    answer: ``,
+    answer: `React 컴포넌트에서 상태관리를 위해 사용되는 hook으로 useState를 통해서 상태값을 업데이트 하면 해당 컴포넌트는 리렌더링 됩니다.`,
   },
   {
     importance: "5",
     question: "useEffect에 대해 설명해주세요.",
-    answer: ``,
+    answer: `기존 클래스형 컴포넌트의 Lifecycle method(componentDidMount, componentDidUpdate, componentWillUnmount)을 대체하는 hook으로, 컴포넌트가 마운트, 업데이트, 언마운트될 때 특정 작업을 실행할 수 있습니다.
+    
+    useEffect(function, dependency)
+    1) dependency === []
+    => 의존성 배열이 빈배열일 시 컴포넌트가 마운트(componentDidMount)될 때만 function 실행
+
+    2) dependency === [state]
+    => 의존성 배열에 state를 추가해줄 시 해당 state가 업데이트(componentDidUpdate)될 때만 실행
+
+    3) function에 return
+    => function에 return 함수를 추가하여 컴포넌트가 언마운트(componentWillUnmount)될 때 특정 로직을 실행 가능`,
+  },
+  {
+    importance: "5",
+    question: "useEffect와 useLayoutEffect의 차이 대해 설명해주세요.",
+    answer: `useEffect의 경우 컴포넌트들이 render, paint된 후에 실행됩니다. 비동기적으로 실행되며, paint된 후에 실행되므로 useEffect 내부에 DOM에 영향을 주는 코드가 있을 경우 UX적으로 해당 요소가 깜빡이는 현상이 발생하게 됩니다.
+    
+    useLayoutEffect의 경우 컴포넌트들이 render된 후 실행되고 그 이후 paint가 됩니다. 동기적으로 실행되며, paint가 되기전에 실행되기 때문에 DOM을 조작하는 코드가 존재하더라도 UX적으로 해당 요소가 깜빡이는 현상이 발생하지 않습니다.
+    
+    - useEffect는 DOM이 화면에 그려진 이후 호출됨
+    - useLayoutEffect는 DOM이 화면에 그려지기 전에 호출됨`,
   },
   {
     importance: "5",
@@ -139,12 +164,17 @@ const list = [
   },
   {
     importance: "5",
-    question: "전역 상태 관리 방법에 대해 설명해주세요.",
-    answer: ``,
+    question:
+      "Props drilling의 개념과 Props drilling을 피하는 방법에 대해 설명해주세요.",
+    answer: `Props drilling은 상위 컴포넌트에서 하위 컴포넌트들로 props를 내려주면서 깊게 중첩된 하위 컴포넌트로 props를 전달하는 방식을 의미합니다.
+    
+    Props drilling을 남발할 경우 구조가 복잡해지고 유지보수가 어려워지며, 예기치 못한 오류를 발생시킬 수 있습니다.
+    
+     redux, recoil, mobx와 같은 전역 상태 관리 라이브러리를 사용하거나 Context API를 통해 props를 전달하여 Props drilling을 피할 수 있습니다.`,
   },
   {
     importance: "5",
-    question: "Props drilling에 대해 설명해주세요.",
+    question: "전역 상태 관리 방법에 대해 설명해주세요.",
     answer: ``,
   },
 ];
