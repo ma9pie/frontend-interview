@@ -4,11 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta
-          name="google-site-verification"
-          content="0ATr3A6QdCZG5gVNu2lZep3W5w7d3aKLynPPdcKH370"
-        />
-
         {/* 아이콘 생성 사이트 - https://favicomatic.com */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -109,7 +104,11 @@ export default function Document() {
           href="icons/favicon-128.png"
           sizes="128x128"
         />
-
+        {/* 구글 서치 콘솔 */}
+        <meta
+          name="google-site-verification"
+          content="0ATr3A6QdCZG5gVNu2lZep3W5w7d3aKLynPPdcKH370"
+        />
         {/* 구글 애널리틱스 */}
         <script
           async
@@ -129,6 +128,12 @@ export default function Document() {
             `,
           }}
         />
+        {/* 구글 애드센스 */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4808054974810104"
+          crossorigin="anonymous"
+        ></script>
         {/* 다크모드 시 화면 깜빡임 제거 */}
         <script
           dangerouslySetInnerHTML={{
