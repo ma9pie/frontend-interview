@@ -61,6 +61,11 @@ const list = [
   },
   {
     importance: "5",
+    question: "재조정(Reconciliation) 개념에 대해서 설명해주세요.",
+    answer: `상태 변화가 있을 때 새로운 Virtual DOM을 생성하여 현재 DOM과 비교한 후 차이가 있는 곳을 감지하여 실제 DOM에 적용시켜주는 과정입니다.`,
+  },
+  {
+    importance: "5",
     question: "state와 props의 차이를 설명해주세요.",
     answer: `[state]
     컴포넌트에서 사용하고 관리할 수 있는 상태값입니다.
@@ -103,8 +108,10 @@ const list = [
   },
   {
     importance: "5",
-    question: "React lifecycle에 대해 설명해주세요.",
-    answer: ``,
+    question: "React Lifecycle에 대해 설명해주세요.",
+    answer: `Lifecycle은 컴포넌트가 생성, 사용, 소멸될 때까지의 생명주기를 뜻하며, mount, update, unmount로 구분됩니다.
+
+    componentDidMount는 컴포넌트가 생성될 때 한 번 호출되며, componentDidUpdate는 컴포넌트의 props 또는 state값이 변경되었을 때, componentWillUnMount는 컴포넌트가 소멸될 때 호출됩니다. 또한 render 메서드는 초기 화면을 그려줄 때와 업데이트 시에 호출됩니다.`,
   },
   {
     importance: "5",
@@ -138,24 +145,9 @@ const list = [
   },
   {
     importance: "5",
-    question: "useCallback에 대해 설명해주세요.",
-    answer: ``,
-  },
-  {
-    importance: "5",
-    question: "useMemo에 대해 설명해주세요.",
-    answer: ``,
-  },
-  {
-    importance: "5",
-    question: "useRef에 대해 설명해주세요.",
-    answer: ``,
-  },
-  {
-    importance: "5",
     question:
-      "state를 직접변경하지 않고 useState를 사용하는 이유를 설명해주세요.",
-    answer: ``,
+      "state를 직접변경하지 않고 setState를 사용하는 이유를 설명해주세요.",
+    answer: `state는 불변성을 유지해야 하기 때문에 setState를 사용하여 변경해야 하며, state를 직접 수정할 경우 컴포넌트에서 render 메서드를 호출하지 않아 화면에 변경된 값이 렌더링 되지 않습니다.`,
   },
   {
     importance: "5",
