@@ -13,41 +13,77 @@ import CommonLayoput from "@/layouts/CommonLayout";
 function Home() {
   return (
     <Wrapper>
-      <ItemContainer title="CS">
-        {cs.map((item, key) => (
-          <Item key={key} question={item.question} answer={item.answer}></Item>
-        ))}
-      </ItemContainer>
+      {cs.length > 0 && (
+        <ItemContainer title="CS">
+          {cs.map((item, key) => (
+            <Item
+              key={key}
+              question={item.question}
+              answer={item.answer}
+            ></Item>
+          ))}
+        </ItemContainer>
+      )}
 
-      <ItemContainer title="CSS">
-        {css.map((item, key) => (
-          <Item key={key} question={item.question} answer={item.answer}></Item>
-        ))}
-      </ItemContainer>
+      {css.length > 0 && (
+        <ItemContainer title="CSS">
+          {css.map((item, key) => (
+            <Item
+              key={key}
+              question={item.question}
+              answer={item.answer}
+            ></Item>
+          ))}
+        </ItemContainer>
+      )}
 
-      <ItemContainer title="JavaScript">
-        {javascript.map((item, key) => (
-          <Item key={key} question={item.question} answer={item.answer}></Item>
-        ))}
-      </ItemContainer>
+      {javascript.length > 0 && (
+        <ItemContainer title="JavaScript">
+          {javascript.map((item, key) => (
+            <Item
+              key={key}
+              question={item.question}
+              answer={item.answer}
+            ></Item>
+          ))}
+        </ItemContainer>
+      )}
 
-      <ItemContainer title="React">
-        {react.map((item, key) => (
-          <Item key={key} question={item.question} answer={item.answer}></Item>
-        ))}
-      </ItemContainer>
+      {react.length > 0 && (
+        <ItemContainer title="React">
+          {react.map((item, key) => (
+            <Item
+              key={key}
+              question={item.question}
+              answer={item.answer}
+            ></Item>
+          ))}
+        </ItemContainer>
+      )}
 
-      <ItemContainer title="Frontend">
-        {frontend.map((item, key) => (
-          <Item key={key} question={item.question} answer={item.answer}></Item>
-        ))}
-      </ItemContainer>
+      {frontend.length > 0 && (
+        <ItemContainer title="Frontend">
+          {frontend.map((item, key) => (
+            <Item
+              key={key}
+              question={item.question}
+              answer={item.answer}
+            ></Item>
+          ))}
+        </ItemContainer>
+      )}
 
-      <ItemContainer title="기타">
-        {etc.map((item, key) => (
-          <Item key={key} question={item.question} answer={item.answer}></Item>
-        ))}
-      </ItemContainer>
+      {etc.length > 0 && (
+        <ItemContainer title="기타">
+          {etc.map((item, key) => (
+            <Item
+              key={key}
+              question={item.question}
+              answer={item.answer}
+            ></Item>
+          ))}
+        </ItemContainer>
+      )}
     </Wrapper>
   );
 }

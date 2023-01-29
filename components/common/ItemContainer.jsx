@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import React from "react";
 import CsSvg from "@/svg/CsSvg";
+import CssSvg from "@/svg/CssSvg";
 import FrontendSvg from "@/svg/FrontendSvg";
 import JavascriptSvg from "@/svg/JavascriptSvg";
 import ReactSvg from "@/svg/ReactSvg";
@@ -13,6 +14,13 @@ const ItemContainer = ({ title, children }) => {
         return (
           <Title>
             <CsSvg></CsSvg>
+            <Text>{title}</Text>
+          </Title>
+        );
+      case "CSS":
+        return (
+          <Title>
+            <CssSvg></CssSvg>
             <Text>{title}</Text>
           </Title>
         );

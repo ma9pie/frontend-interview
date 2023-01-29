@@ -36,7 +36,7 @@ const list = [
   },
   {
     importance: "5",
-    question: "개발 도중에 발생하는 에러에대해 보통 어떻게 대처하시나요?",
+    question: "개발 도중에 발생하는 에러에 대해 보통 어떻게 대처하시나요?",
     answer: ``,
   },
 ];
