@@ -152,7 +152,17 @@ const list = [
   {
     importance: "5",
     question: "React rendering 성능을 향상시키기 위한 방법들을 설명해주세요.",
-    answer: ``,
+    answer: `- 크롬 확장 프로그램 LightHouse를 통한 성능 분석
+    - 객체 타입의 state는 최대한 분할하여 선언
+    - React.memo를 통한 컴포넌트 memoization
+    - useMemo를 통한 함수 반환 연산값 재사용
+    - useCallback을 통한 함수 재생성 및 리렌더링 방지
+    - 가상화된 리스트(windowing)
+    - event, onChange에 throttle, debounce 적용
+    - 이미지 사이즈 최적화
+    - Lazy loading, code splitting
+    - react-query로 API data 캐싱
+    - css repaint, reflow 최적화`,
   },
   {
     importance: "5",
