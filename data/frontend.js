@@ -1,8 +1,24 @@
 const list = [
   {
     importance: "5",
-    question: "브라우저 주소창에 google을 입력하면 발생하는 일을 설명해주세요.",
-    answer: ``,
+    question: "DNS에 대해 설명해주세요.",
+    answer: `도메인 이름 시스템 서버(Domain Name System Servers)는 URL들의 이름과 IP주소를 저장하고 있는 데이터베이스로, 웹사이트를 위한 주소록입니다.
+    
+    숫자로 된 IP주소 대신 사용자가 사용하기 편리하도록 주소를 매핑해주는 역할을 합니다.`,
+  },
+  {
+    importance: "5",
+    question:
+      "브라우저 주소창에 www.google.com을 입력하면 발생하는 일을 설명해주세요.",
+    answer: `1. 사용자가 웹브라우저 검색창에 www.google.com 입력
+    2. 웹브라우저는 캐싱된 DNS 기록들을 통해 해당 도메인 주소와 대응하는 IP주소를 확인
+    3. 웹브라우저가 HTTP를 사용하여 DNS에게 입력된 도메인 주소를 요청
+    4. DNS가 웹브라우저에게 찾는 사이트의 IP주소를 응답
+    5. 웹브라우저가 웹서버에게 IP주소를 이용하여 HTML문서 요청
+    6. 웹 어플리케이션 서버(WAS)와 데이터베이스에서 우선 웹페이지 작업을 처리
+    7. 작업처리 결과를 웹서버로 전송
+    8. 웹서버는 웹브라우저에게 HTML 문서 결과를 응답
+    9. 웹브라우저는 화면에 웹페이지 내용물 출력`,
   },
   {
     importance: "5",
@@ -14,11 +30,7 @@ const list = [
   5. 뷰포트 기반으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기 계산(Layout/Reflow 단계)
   6. 계산한 위치, 크기 기반으로 화면에 그림(Paint 단계)`,
   },
-  {
-    importance: "5",
-    question: "DNS에 대해 설명해주세요.",
-    answer: ``,
-  },
+
   {
     importance: "5",
     question: "REST API에 대해 설명해주세요.",
