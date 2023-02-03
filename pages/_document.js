@@ -132,7 +132,7 @@ export default function Document() {
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4808054974810104"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         {/* 다크모드 시 화면 깜빡임 제거 */}
         <script
