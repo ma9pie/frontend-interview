@@ -3,7 +3,6 @@ const list = [
     importance: "5",
     question: "DNS에 대해 설명해주세요.",
     answer: `도메인 이름 시스템 서버(Domain Name System Servers)는 URL들의 이름과 IP주소를 저장하고 있는 데이터베이스로, 웹사이트를 위한 주소록입니다.
-    
     숫자로 된 IP주소 대신 사용자가 사용하기 편리하도록 주소를 매핑해주는 역할을 합니다.`,
   },
   {
@@ -27,16 +26,39 @@ const list = [
   2. CSS 파싱 후 CSSOM(CSS Object Model) 트리 구축
   3. script 태그를 만나면 HTML 파싱을 중단하고 Javascript 코드를 파싱
   4. DOM과 CSSOM을 조합하여 렌더트리(Render Tree) 구축
-  5. 뷰포트 기반으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기 계산(Layout/Reflow 단계)
-  6. 계산한 위치, 크기 기반으로 화면에 그림(Paint 단계)`,
+  5. 뷰포트 기반으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기 계산
+  6. 계산한 위치, 크기 기반으로 화면에 그림`,
   },
-
   {
     importance: "5",
-    question: "REST API에 대해 설명해주세요.",
-    answer: ``,
-  },
+    question: "URI과 URL의 차이",
+    answer: `[URI] : 통합 자원 식별자(Uniform Resource Identifier)
+    URI는 인터넷상의 리소스(자원) 자체를 식별하는 고유한 문자열 시퀀스입니다.
 
+    [URL] : 통합 자원 위치(Uniform Resource Location)
+    URL은 네트워크상의 리소스(자원)의 위치를 나타내기 위한 규약입니다.
+    
+    [예시]
+    URI=식별자, URL=식별자+위치
+
+   - https://www.example.com/index.html?page=123
+   위의 링크에서 index.html의 위치를 표기한 https://www.example.com/index.html까지는 URL입니다.
+   여기서 query string으로 식별자가 포함된 https://www.example.com/index.html?page=123은 URI입니다.`,
+  },
+  {
+    importance: "5",
+    question: "RESTful API에 대해 설명해주세요.",
+    answer: `REST(Representational State Transfer API)란 HTTP URI를 통해서 자원(resource)을 명시하고, HTTP Method(GET, POST, PUT, DELETE, PATCH 등등)을 통해서 해당 자원(URI)에 대한 CRUD Operation을 적용하는 것을 의미합니다. 
+    이러한 REST 원리를 따르는 API를 RESTful API라고 합니다.
+    
+    [설계 규칙]
+    - 슬래시(/)는 계층 관계를 나타내는데 사용한다.
+    - URI 마지막 문자로 슬래시를 포함하지 않는다.
+    - 불가피하게 긴 URI 사용 시 하이픈(-)을 사용하여 가독성을 높인다.
+    - 밑줄(_)은 사용하지 않는다.
+    - 파일확장자는 URI에 포함하지 않는다.
+    - 자원은 동사보다 명사로, 대문자보다는 소문자로 표현한다.`,
+  },
   {
     importance: "5",
     question: "Webpack, Babel, Polyfill에 대해 설명해주세요.",

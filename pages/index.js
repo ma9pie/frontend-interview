@@ -8,7 +8,7 @@ import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
 import Item from "@/components/common/Item";
 import ItemContainer from "@/components/common/ItemContainer";
-import CommonLayoput from "@/layouts/CommonLayout";
+import CommonLayout from "@/layouts/CommonLayout";
 
 function Home() {
   return (
@@ -91,7 +91,7 @@ function Home() {
 export default Home;
 
 Home.getLayout = function getLayout(page) {
-  return <CommonLayoput>{page}</CommonLayoput>;
+  return <CommonLayout>{page}</CommonLayout>;
 };
 
 const Wrapper = styled.div`

@@ -162,7 +162,7 @@ const list = [
     - 이미지 사이즈 최적화
     - Lazy loading, code splitting
     - react-query로 API data 캐싱
-    - css repaint, reflow 최적화`,
+    - css reflow, repaint 최소화`,
   },
   {
     importance: "5",
