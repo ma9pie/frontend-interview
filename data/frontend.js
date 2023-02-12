@@ -62,17 +62,40 @@ const list = [
   {
     importance: "5",
     question: "Webpack, Babel, Polyfill에 대해 설명해주세요.",
-    answer: ``,
+    answer: `- Webpack
+    웹팩은 Javascript, CSS, Img 등등을 브라우저에서 실행할 수 있는 번들 파일로 변환하는 모듈 번들러입니다. 
+    
+    - Babel
+    바벨은 최신 자바스크립트 코드를 구형 브라우저에서도 실행할 수 있는 코드로 변환하는 자바스크립트 컴파일러입니다. 또한 Typescript와 같은 다른 언어를 Javascript로 컴파일 하는데 사용됩니다.
+    
+    - Pollyfill
+    폴리필은 브라우저가 지원하지 않는 자바스크립트 코드를 지원 가능하도록 변환한 코드 조각을 의미합니다. "충전솜"이라는 의미 그대로 최신 문법과 오래된 브라우저 사이의 간격을 메꾸는 역할을 합니다.`,
   },
   {
     importance: "5",
     question: "SPA, CSR, SSR의 차이를 설명해주세요.",
-    answer: ``,
+    answer: `- SPA(Single Page Application)
+    전체 페이지를 다시 로드할 필요 없이 변경된 부분만 동적으로 업데이트하는 어플리케이션을 의미합니다. 새로고침이 발생하지 않기 때문에 네이티브 앱과 유사하게 매끄럽고 응답성이 뛰어난 서비스를 제공할 수 있습니다.
+    
+    - CSR(Client Side Rendering)
+    사용자의 웹브라우저에서 Javascript를 사용하여 서버에서 필요한 데이터를 가져오고, 클라이언트측에서 웹 어플리케이션을 동적으로 렌더링하는 것을 의미합니다. 초기 로드 시간이 빠르고 응답성이 뛰어난 사용자 경험을 제공합니다.
+
+    - SSR(Server Side Rendering)
+    HTML을 클라이언트에 보내기 전에 서버측에서 웹 어플리케이션을 렌더링하는 것을 의미합니다. 서버는 클라이언트에게 요청을 받으면 미리 렌더링 된 페이지를 제공하고, 이러한 방식은 페이지가 처음 로드될 때 컨텐츠가 검색 엔진에 표시되므로 더 빠른 초기 로드 시관과 더 나은 SEO(검색 엔진 최적화)를 제공합니다.`,
   },
   {
     importance: "5",
-    question: "CORS가 무엇인지, 해결해 본 경험이 있으신지 말씀해주세요.",
-    answer: ``,
+    question: "CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해주세요.",
+    answer: `CORS(Cross Origin Resource Sharing)란 교차 출처 리소스 공유란 뜻이며, 웹 페이지가 제공하는 도메인이 아닌 다른 도메인에서 리소스를 요청하는 것을 의미합니다. 브라우저는 CORS 에러를 발생시켜 악의적인 스크립트가 중요한 데이터에 접근하거나 무단 요청하지 못하도록 방지합니다.
+    
+    [해결 방법]
+    - 프록시 서버 설정
+    - 서버에서 CORS 헤더를 추가하여 특정 도메인의 요청을 허용
+      ㆍAccess-Control-Allow-Origin: *
+      ㆍAccess-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS
+      ㆍAccess-Control-Allow-Headers: Content-Type, Authorization
+      ㆍAccess-Control-Max-Age: 86400
+    - Chrome 확장 프로그램 "Allow CORS" 사용`,
   },
   {
     importance: "5",
@@ -92,12 +115,20 @@ const list = [
   {
     importance: "5",
     question: "로컬 스토리지, 세션 스토리지, 쿠키에 대해 설명해주세요.",
-    answer: ``,
+    answer: `- localStorage
+    로컬 스토리지는 브라우저 내에서 로컬로 데이터를 저장할 수 있는 저장소입니다. 로컬 스토리지에 저장된 데이터는 사용자가 브라우저를 닫거나 컴퓨터를 재시작한 후에도 그대로 유지됩니다. 
+    
+    - Session Storage
+    세션 스토리지는 로컬 스토리지와 비슷하지만 사용자가 브라우저 탭을 닫으면 저장된 데이터가 삭제됩니다. 일회성 로그인, 입력 폼 저장, 비회원 장바구니와 같은 임시 데이터를 저장하는데 유용합니다.
+    
+    - Cookie 
+    쿠키는 클라이언트 로컬에 저장되는 키와 값이 있는 작은 텍스트 파일입니다.
+    4KB의 크기 제한이 있으며 일정 시간이 지나면 만료되도록 설정할 수 있고 만료 후에는 사용자의 컴퓨터에서 삭제됩니다.`,
   },
   {
     importance: "5",
-    question: "Event loop와 Task queue에 대해 설명해주세요.",
-    answer: ``,
+    question: "Event loop에 대해 설명해주세요.",
+    answer: `이벤트 루프는 콜 스택과 테스크 큐를 주시하고 콜 스택이 비어있다면 테스트 큐에 있던 작업을 콜 스택으로 보내주는 역할을 합니다.`,
   },
   {
     importance: "5",
