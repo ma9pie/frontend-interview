@@ -133,12 +133,28 @@ const list = [
   {
     importance: "5",
     question: "MVC, MVVM 패턴에 대해 설명해주세요.",
-    answer: ``,
+    answer: `- MVC
+    MVC 패턴은 View(화면), Model(데이터), Controller(컨트롤러)로 구성된 디자인 패턴입니다.
+    1. Model : 모델은 프론트엔드 어플리케이션 의 데이터 및 로직을 나타내며, 어플리케이션의 상태를 관리하고 모든 비즈니스 로직을 처리합니다.
+    2. View : 뷰는 데이터를 렌더링하고 사용자에게 표시 및 상호작용할 수 있는 인터페이스를 만드는 역할을 합니다.
+    3. Controller : 컨트롤러는 모델과 뷰 사이의 중재자 역할을 합니다. 사용자의 입력을 처리하고 그에 따라 모델과 뷰를 업데이트합니다.
+
+    - MVVM
+    MVVM은 Model, View, ViewModel로 구성되어 있으며 react, vue, angular와 같은 라이브러리나 프레임워크에서 일반적으로 사용되는 디자인 패턴입니다. 
+    1. Model : 모델은 MVC패턴과 마찬가지로 어플리케이션의 데이터와 로직을 나타냅니다.
+    2. View : 뷰는 MVC패턴과 같이 데이터를 렌더링하고 사용자에게 표시하는 역할을 합니다.
+    3. ViewModel : 뷰모델은 모델과 뷰 사이의 중재자 역할을 하며, 모델의 데이터를 뷰에 표시하기 쉬운 형식으로 변환하는 역할을 합니다. 또한 데이터에 대한 모든 업데이트를 처리하고 이를 모델에 다시 전달합니다.`,
   },
   {
     importance: "5",
     question: "HTTP와 HTTPS의 차이점을 설명해주세요.",
-    answer: ``,
+    answer: `- HTTP
+    HTTP는 Hypertext Transfer Protocol의 약자로 웹서버 및 웹 브라우저 상호간의 데이터 전송을 위한 응용계층 프로토콜입니다. 
+    
+    - HTTPS
+    HTTPS는 데이터 전송을 보호하기 위해 SSL(Secure Sockets Layer) 또는 TLS(Transport Layer Security) 프로토콜을 사용하여 데이터를 암호화하는 HTTP의 보안 버전입니다.
+
+    요약하자면 HTTP는 보안되지 않은 프로토콜인 반면, HTTPS는 데이터를 암호화하여 인터넷을 통해 전송되는 민감한 정보를 보호하는 보안 프로토콜입니다.`,
   },
   {
     importance: "5",
