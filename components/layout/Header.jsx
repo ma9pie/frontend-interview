@@ -29,7 +29,7 @@ const Wrapper = styled.header`
   width: 100%;
   height: 60px;
   padding: 0px 20px;
-  background: linear-gradient(-45deg, #ef32d9, #89fffd);
+  background-color: var(--blue500);
   & * {
     background: transparent;
   }
