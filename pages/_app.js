@@ -13,6 +13,9 @@ function App({ Component, pageProps }) {
 
   // 구글 애널리틱스 조회수 측정
   useEffect(() => {
+    const { hostname } = window.location;
+    if (hostname === "localhost") return;
+
     const handleRouteChange = (url) => {
       GoogleAnalyticsUtils.changeRouteGtag(url);
     };
