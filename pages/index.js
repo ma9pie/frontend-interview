@@ -8,11 +8,63 @@ import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
 import List from "@/components/common/List";
 import ListContainer from "@/components/common/ListContainer";
+import Search from "@/components/common/Search";
 import CommonLayout from "@/layouts/CommonLayout";
 
 function Home() {
+  const [searchWord, setSearchWord] = useState("");
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    const data = [].concat(cs, css, javascript, react, frontend);
+    const tmpResults = [];
+    data.map((item) => {
+      if (
+        item.question.includes(searchWord) ||
+        item.answer.includes(searchWord)
+      ) {
+        tmpResults.push(item);
+      }
+    });
+    setResults(tmpResults);
+  }, [searchWord]);
+
+  const handleSearchWord = (e) => {
+    setSearchWord(e.target.value);
+  };
+
+  const resetSearchWord = (e) => {
+    setSearchWord("");
+  };
+
+  if (searchWord) {
+    return (
+      <Wrapper>
+        <Search
+          searchWord={searchWord}
+          onChange={handleSearchWord}
+          resetSearchWord={resetSearchWord}
+        ></Search>
+        {results.length === 0 ? (
+          <NoResults>검색 결과가 없습니다.</NoResults>
+        ) : (
+          <ListContainer>
+            {results.map((item, key) => (
+              <List
+                key={item.question}
+                question={item.question}
+                answer={item.answer}
+              ></List>
+            ))}
+          </ListContainer>
+        )}
+      </Wrapper>
+    );
+  }
+
   return (
     <Wrapper>
+      <Search searchWord={searchWord} onChange={handleSearchWord}></Search>
       {cs.length > 0 && (
         <ListContainer title="CS">
           {cs.map((item, key) => (
@@ -95,5 +147,15 @@ Home.getLayout = function getLayout(page) {
 };
 
 const Wrapper = styled.div`
+  display: grid;
+  gap: 40px;
   padding: 20px;
+`;
+
+const NoResults = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--sub);
+  height: calc(100vh - 300px);
 `;

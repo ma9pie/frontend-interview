@@ -63,9 +63,7 @@ const ListContainer = ({ title, children }) => {
 
 export default ListContainer;
 
-const Wrapper = styled.div`
-  margin-bottom: 40px;
-`;
+const Wrapper = styled.div``;
 const Title = styled.h2`
   display: flex;
   align-items: center;

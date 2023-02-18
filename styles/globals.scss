@@ -21,6 +21,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+input:focus {
+  outline: none;
+}
+
 /* 다크 모드(기본) */
 :root {
   --vh: 100%;
