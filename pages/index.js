@@ -4,38 +4,40 @@ import etc from "@/data/etc";
 import frontend from "@/data/frontend";
 import javascript from "@/data/javascript";
 import react from "@/data/react";
+import useThrottle from "@/hooks/useThrottle";
 import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import List from "@/components/common/List";
 import ListContainer from "@/components/common/ListContainer";
 import Search from "@/components/common/Search";
 import CommonLayout from "@/layouts/CommonLayout";
 
+const data = [].concat(cs, css, javascript, react, frontend);
+
 function Home() {
   const [searchWord, setSearchWord] = useState("");
   const [results, setResults] = useState([]);
 
-  useEffect(() => {
-    const data = [].concat(cs, css, javascript, react, frontend);
-    const tmpResults = [];
-    data.map((item) => {
-      if (
-        item.question.includes(searchWord) ||
-        item.answer.includes(searchWord)
-      ) {
-        tmpResults.push(item);
-      }
-    });
-    setResults(tmpResults);
-  }, [searchWord]);
-
+  // 입력 상태 관리
   const handleSearchWord = (e) => {
-    setSearchWord(e.target.value);
+    const { value } = e.target;
+    findWord(value.trim());
+    setSearchWord(value);
   };
 
+  // 입력 리셋
   const resetSearchWord = (e) => {
     setSearchWord("");
   };
+
+  // 검색 결과
+  const findWord = useThrottle((word) => {
+    setResults(
+      data.filter(
+        (item) => item.question.includes(word) || item.answer.includes(word)
+      )
+    );
+  }, 100);
 
   if (searchWord) {
     return (
