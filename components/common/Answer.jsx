@@ -4,9 +4,10 @@ import React from "react";
 const Answer = (props) => {
   return (
     <Wrapper>
-      {props.answer.split("\n").map((item, key) => (
-        <Text key={key}>{item}</Text>
-      ))}
+      {props.answer &&
+        props.answer
+          .split("\n")
+          .map((item, key) => <Text key={key}>{item}</Text>)}
     </Wrapper>
   );
 };

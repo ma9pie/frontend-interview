@@ -1,10 +1,9 @@
-import { css } from "@emotion/css";
 import styled from "@emotion/styled";
 import React, { useRef, useState } from "react";
 import Answer from "@/components/common/Answer";
 import Question from "@/components/common/Question";
 
-const Item = (props) => {
+const List = (props) => {
   const ref = useRef();
   const [height, setHeight] = useState("0px");
   const [isOpenAnswer, setIsOpenAnswer] = useState(false);
@@ -43,7 +42,7 @@ const Item = (props) => {
   );
 };
 
-export default Item;
+export default List;
 
 const Wrapper = styled.div`
   margin-bottom: 24px;

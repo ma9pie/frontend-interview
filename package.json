@@ -18,8 +18,7 @@
     "react-collapse": "^5.1.1",
     "react-dom": "18.2.0",
     "react-modal": "^3.16.1",
-    "sass": "^1.55.0",
-    "simplebar-react": "^2.4.3"
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.19.6",

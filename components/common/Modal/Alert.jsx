@@ -83,7 +83,7 @@ AlertModal.defaultProps = {
   isOpen: false, // 모달을 열고 닫는 변수
   top: "50%", // 모달 top 위치
   left: "50%", // 모달 left 위치
-  padding: "24px ", // 모달 패딩
+  padding: "16px 32px ", // 모달 패딩
   minWidth: "320px", // 최소 너비
   title: "알림", // 상단 타이틀
   message: "alert message", // 표시 메시지
@@ -124,7 +124,8 @@ const Button = styled.button`
   border-radius: 5px;
   width: 100px;
   height: 30px;
-  background-color: var(--button);
+  background-color: var(--primaryColor);
+  color: white;
   & * {
     background: transparent;
   }

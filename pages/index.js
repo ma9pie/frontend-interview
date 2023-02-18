@@ -6,83 +6,83 @@ import javascript from "@/data/javascript";
 import react from "@/data/react";
 import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
-import Item from "@/components/common/Item";
-import ItemContainer from "@/components/common/ItemContainer";
+import List from "@/components/common/List";
+import ListContainer from "@/components/common/ListContainer";
 import CommonLayout from "@/layouts/CommonLayout";
 
 function Home() {
   return (
     <Wrapper>
       {cs.length > 0 && (
-        <ItemContainer title="CS">
+        <ListContainer title="CS">
           {cs.map((item, key) => (
-            <Item
+            <List
               key={key}
               question={item.question}
               answer={item.answer}
-            ></Item>
+            ></List>
           ))}
-        </ItemContainer>
+        </ListContainer>
       )}
 
       {css.length > 0 && (
-        <ItemContainer title="CSS">
+        <ListContainer title="CSS">
           {css.map((item, key) => (
-            <Item
+            <List
               key={key}
               question={item.question}
               answer={item.answer}
-            ></Item>
+            ></List>
           ))}
-        </ItemContainer>
+        </ListContainer>
       )}
 
       {javascript.length > 0 && (
-        <ItemContainer title="JavaScript">
+        <ListContainer title="JavaScript">
           {javascript.map((item, key) => (
-            <Item
+            <List
               key={key}
               question={item.question}
               answer={item.answer}
-            ></Item>
+            ></List>
           ))}
-        </ItemContainer>
+        </ListContainer>
       )}
 
       {react.length > 0 && (
-        <ItemContainer title="React">
+        <ListContainer title="React">
           {react.map((item, key) => (
-            <Item
+            <List
               key={key}
               question={item.question}
               answer={item.answer}
-            ></Item>
+            ></List>
           ))}
-        </ItemContainer>
+        </ListContainer>
       )}
 
       {frontend.length > 0 && (
-        <ItemContainer title="Frontend">
+        <ListContainer title="Frontend">
           {frontend.map((item, key) => (
-            <Item
+            <List
               key={key}
               question={item.question}
               answer={item.answer}
-            ></Item>
+            ></List>
           ))}
-        </ItemContainer>
+        </ListContainer>
       )}
 
       {etc.length > 0 && (
-        <ItemContainer title="기타">
+        <ListContainer title="기타">
           {etc.map((item, key) => (
-            <Item
+            <List
               key={key}
               question={item.question}
               answer={item.answer}
-            ></Item>
+            ></List>
           ))}
-        </ItemContainer>
+        </ListContainer>
       )}
     </Wrapper>
   );

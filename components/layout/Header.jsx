@@ -29,7 +29,7 @@ const Wrapper = styled.header`
   width: 100%;
   height: 60px;
   padding: 0px 20px;
-  background-color: var(--blue500);
+  background-color: var(--primaryColor);
   & * {
     background: transparent;
   }

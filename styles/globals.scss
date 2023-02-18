@@ -59,7 +59,7 @@ a {
   --blue900: #2a4365;
 
   // 브랜드 컬러
-  --primaryColor: #fbd538;
+  --primaryColor: #4299e1;
 
   // 배경
   --bg: #202020;
@@ -70,14 +70,19 @@ a {
   --main: #ffffff;
   --sub: #868d9a;
 
-  // 버튼
-  --button: #2d3138;
+  // 컴포넌트
+  --textBox: #2d3138;
+  --disabled: #3b3b3b;
+  --sectionLine: #343a45;
+  --icon1: #4a515d;
+  --icon2: #727988;
+  --pressedMainBtn: #3182f6;
 }
 
 /* 라이트 모드 */
 [data-theme="Light"] {
   // 브랜드 컬러
-  --primaryColor: #fcd034;
+  --primaryColor: #4299e1;
 
   // 배경
   --bg: #ffffff;
@@ -88,8 +93,12 @@ a {
   --main: #21252f;
   --sub: #868d9a;
 
-  // 버튼
-  --button: #e9eaed;
+  // 컴포넌트
+  --textBox: #f9f9f9;
+  --disabled: #e9eaed;
+  --sectionLine: #f0f0f0;
+  --icon1: #b4b9c1;
+  --icon2: #727988;
 }
 
 /* react-modal */

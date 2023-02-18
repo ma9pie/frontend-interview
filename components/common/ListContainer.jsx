@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 import React from "react";
 import CsSvg from "@/svg/CsSvg";
 import CssSvg from "@/svg/CssSvg";
@@ -7,7 +6,7 @@ import FrontendSvg from "@/svg/FrontendSvg";
 import JavascriptSvg from "@/svg/JavascriptSvg";
 import ReactSvg from "@/svg/ReactSvg";
 
-const ItemContainer = ({ title, children }) => {
+const ListContainer = ({ title, children }) => {
   const imageSelector = (title) => {
     switch (title) {
       case "CS":
@@ -62,7 +61,7 @@ const ItemContainer = ({ title, children }) => {
   );
 };
 
-export default ItemContainer;
+export default ListContainer;
 
 const Wrapper = styled.div`
   margin-bottom: 40px;

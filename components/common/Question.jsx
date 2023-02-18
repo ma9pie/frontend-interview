@@ -3,6 +3,14 @@ import React from "react";
 import Chevron from "@/components/common/Chevron";
 
 const Question = (props) => {
+  if (props.answer === null) {
+    return (
+      <Wrapper>
+        <Text>{props.question}</Text>
+      </Wrapper>
+    );
+  }
+
   return (
     <Wrapper>
       <Chevron
