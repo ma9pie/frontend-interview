@@ -25,3 +25,19 @@ PWA(Progressive Web App)를 적용하여 반응형 모바일 웹앱으로 개발
 
 - 안드로이드의 경우 크롬에서 우측 상단 점세개 표시를 클릭하여 "홈 화면에 추가" 클릭  
 - 사파리의 경우 사파리 앱 중앙 하단에 공유 버튼을 탭하여 "홈 화면에 추가" 클릭  
+
+<br/>
+<br/>
+
+### ✨업데이트 내역
+
+- 2023-02-18
+  - 코드 리팩토링 및 검색 기능 추가
+  <div style="display:flex">
+  <img src="https://user-images.githubusercontent.com/115917964/219864233-488e366f-8d29-4662-9904-31657b93c2fa.png" width=30% height=30%/>
+  <img src="https://user-images.githubusercontent.com/115917964/219864250-0455fe1d-a265-48da-b43d-c47d90d2082c.png" width=30% height=30%/>
+  <img src="https://user-images.githubusercontent.com/115917964/219864266-ede1e225-fcba-4631-a6d4-1253cb78bef3.png" width=30% height=30%/>
+<div>
+  
+
+  
