@@ -1,39 +1,56 @@
 import ReactDOM from "react-dom/client";
 import Alert from "@/components/common/Modal/Alert";
 
-const ModalUtils = () => {};
-
-const defaultProps = {
-  isOpen: true,
-  top: "50%",
-  left: "50%",
-  message: "message\n message\n message",
-  confirmBtnText: "확인",
-  cancleBtnText: "취소",
-  component: () => {},
-  onAfterOpen: () => {},
-  onAfterClose: () => {},
-  onRequestConfirm: () => {},
-  onRequestCancle: () => {},
+const ModalUtils = {
+  hashMap: new Map(),
 };
 
-// Alert 모달
-ModalUtils.openAlert = (obj) => {
-  let props = { ...defaultProps, ...obj };
+// node 추가
+ModalUtils.appendNode = (Component, data = {}, id) => {
+  const { key } = data;
+  const props = { isOpen: true };
+  const container = document.getElementById(id);
+  if (!container) return;
+  const node = document.createElement("div");
+  const root = ReactDOM.createRoot(node);
+  container.append(node);
 
-  const modal = document.getElementById("alert-modal");
-  const root = ReactDOM.createRoot(modal);
-
-  const onRequestClose = () => {
+  props.onRequestClose = () => {
     props.isOpen = false;
-    root.render(<Alert {...props}></Alert>);
+    root.render(<Component {...props} {...data}></Component>);
     setTimeout(() => {
-      root.unmount();
+      node.remove();
+      if (key) {
+        ModalUtils.hashMap.delete(key);
+      }
     }, 200);
   };
 
-  props.onRequestClose = onRequestClose;
-  root.render(<Alert {...props}></Alert>);
+  props.isOpen = true;
+  root.render(<Component {...props} {...data}></Component>);
+
+  if (key) {
+    node.id = key;
+    ModalUtils.hashMap.set(key, props);
+  }
+};
+
+// close
+ModalUtils.close = (key) => {
+  const node = document.getElementById(key);
+  if (node) {
+    ModalUtils.hashMap.get(key).onRequestClose();
+  }
+};
+
+// empty modal
+ModalUtils.openModal = (data) => {
+  ModalUtils.appendNode(Modal, data, "modal");
+};
+
+// alert
+ModalUtils.openAlert = (data) => {
+  ModalUtils.appendNode(Alert, data, "alert-modal");
 };
 
 export default ModalUtils;

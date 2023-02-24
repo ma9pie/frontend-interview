@@ -1,133 +1,128 @@
+import { css, cx } from "@emotion/css";
 import styled from "@emotion/styled";
 import React, { useEffect } from "react";
-import ReactModal from "react-modal";
 
-function AlertModal(props) {
-  const unixTime = parseInt(new Date().getTime() / 1000);
-
-  const customStyles = {
-    overlay: {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: "rgba(0,0,0,0.3)",
-      zIndex: unixTime,
-    },
-    content: {
-      top: props.top,
-      left: props.left,
-      right: "auto",
-      bottom: "auto",
-      transform: "translate(-50%,-50%)",
-      border: "1px solid var(--divider)",
-      borderRadius: "15px",
-      backgroundColor: "var(--bg)",
-      margin: props.margin,
-      padding: props.padding,
-      minWidth: props.minWidth,
-      boxShadow: "0px 3px 9px rgba(0, 0, 0, 0.3)",
-      zIndex: unixTime,
-    },
-  };
-
+function Alert(props) {
   useEffect(() => {
-    window.addEventListener("keydown", onKeyDown);
-    return () => {
-      window.removeEventListener("keydown", onKeyDown);
-    };
-  });
+    props.onAfterOpen();
+    return () => props.onAfterClose();
+  }, []);
 
-  const onKeyDown = (e) => {
-    if (e.key === "Enter" && props.isOpen) {
-      props.onRequestClose();
-      props.onAfterClose();
-    }
-  };
-
-  ReactModal.setAppElement("#alert-modal");
   return (
-    <ReactModal
-      contentLabel="AlertModal"
-      style={customStyles}
-      closeTimeoutMS={200}
-      isOpen={props.isOpen}
-      onAfterOpen={() => props.onAfterOpen()}
-      onAfterClose={() => props.onAfterClose()}
-      onRequestClose={() => props.onRequestClose()}
-    >
-      <Top>
-        <Title> {props.title}</Title>
-      </Top>
-      <ContentBox>
-        {props.component()}
-        {props.message
-          .toString()
-          .split("\n")
-          .map((text, idx) => {
-            if (text) return <Text key={idx}>{text}</Text>;
-          })}
-      </ContentBox>
-
-      <ButtonBox>
-        <Button onClick={() => props.onRequestClose()}>확인</Button>
-      </ButtonBox>
-    </ReactModal>
+    <Wrapper>
+      <Overlay
+        onClick={props.onRequestClose}
+        className={props.isOpen ? fadeIn : fadeOut}
+      ></Overlay>
+      <Container
+        top={props.top}
+        left={props.left}
+        className={props.isOpen ? fadeIn : fadeOut}
+      >
+        <Top>
+          <Title>{props.title}</Title>
+        </Top>
+        <Content>
+          {props.component()}
+          {props.message &&
+            props.message
+              .split("\n")
+              .map((text, idx) => <Text key={idx}>{text}</Text>)}
+        </Content>
+        <ButtonBox>
+          <MainButton onClick={props.onRequestClose}>
+            {props.confirmBtnText}
+          </MainButton>
+        </ButtonBox>
+      </Container>
+    </Wrapper>
   );
 }
 
-export default React.memo(AlertModal);
+export default Alert;
 
-AlertModal.defaultProps = {
-  isOpen: false, // 모달을 열고 닫는 변수
-  top: "50%", // 모달 top 위치
-  left: "50%", // 모달 left 위치
-  padding: "16px 32px ", // 모달 패딩
-  minWidth: "320px", // 최소 너비
-  title: "알림", // 상단 타이틀
-  message: "alert message", // 표시 메시지
-  confirmBtnText: "확인", // 버튼 텍스트
-  component: () => {}, // 모달에 전달할 컴포넌트
-  onAfterOpen: () => {}, // 모달이 열린 후 실행 함수
-  onAfterClose: () => {}, // 모달이 닫힌 후 실행 함수
-  onRequestClose: () => {}, // 모달 닫기 실행 함수
+Alert.defaultProps = {
+  isOpen: false,
+  top: "50%",
+  left: "50%",
+  title: "알림",
+  message: "",
+  confirmBtnText: "확인",
+  component: () => {},
+  onAfterOpen: () => {},
+  onAfterClose: () => {},
+  onRequestClose: () => {},
 };
 
+const fadeIn = css`
+  animation: fade-in 0.2s ease-in-out forwards;
+`;
+const fadeOut = css`
+  animation: fade-out 0.2s ease-in-out forwards;
+`;
+const Wrapper = styled.div``;
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: var(--overlay);
+`;
+const Container = styled.div`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  min-width: 240px;
+  gap: 24px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--bg);
+  transform: translate(-50%, -50%);
+  z-index: 999;
+`;
 const Top = styled.div`
+  width: 100%;
+  margin-top: 16px;
+`;
+const Title = styled.p`
+  font: var(--headline20);
+  text-align: center;
+  margin: 0px;
+`;
+const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Title = styled.div`
-  white-space: nowrap;
-  margin-bottom: 24px;
-`;
-
-const ContentBox = styled.div`
+  width: 100%;
+  max-height: 1000px;
   text-align: center;
 `;
-
 const Text = styled.p`
-  height: 20px;
+  font: var(--body16);
+  min-height: 20px;
+  margin: 0px;
 `;
-
 const ButtonBox = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  width: 100%;
 `;
-
-const Button = styled.button`
-  border: none;
-  border-radius: 5px;
-  width: 100px;
-  height: 30px;
-  background-color: var(--primaryColor);
+const MainButton = styled.button`
+  font: var(--body14);
+  width: 100%;
+  height: 40px;
+  border: 0px;
   color: white;
-  & * {
-    background: transparent;
-  }
+  transition: background-color 0.15s ease-in-out;
   cursor: pointer;
+  background-color: var(--brandColor);
+  &:hover {
+    background-color: var(--pressedMainBtn);
+  }
 `;

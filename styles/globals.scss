@@ -63,12 +63,13 @@ input:focus {
   --blue900: #2a4365;
 
   // 브랜드 컬러
-  --primaryColor: #4299e1;
+  --brandColor: #4299e1;
 
   // 배경
   --bg: #202020;
   --subBg: #191f28;
-  --overlay: #333333;
+  --overlay: rgba(0, 0, 0, 0.4);
+  --wrapperBg: #333333;
 
   // 텍스트
   --main: #ffffff;
@@ -86,12 +87,13 @@ input:focus {
 /* 라이트 모드 */
 [data-theme="Light"] {
   // 브랜드 컬러
-  --primaryColor: #4299e1;
+  --brandColor: #4299e1;
 
   // 배경
   --bg: #ffffff;
   --subBg: #f9f9f9;
-  --overlay: #e5e5e5;
+  --overlay: rgba(0, 0, 0, 0.7);
+  --wrapperBg: #e5e5e5;
 
   // 텍스트
   --main: #21252f;
@@ -105,25 +107,40 @@ input:focus {
   --icon2: #727988;
 }
 
-/* react-modal */
-.ReactModal__Overlay {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.ReactModal__Overlay--after-open {
-  opacity: 1;
-}
-
-.ReactModal__Overlay--before-close {
-  opacity: 0;
-}
-
-.ReactModal__Content--after-open {
-  overflow: visible !important;
-}
-
 /* react-collapse */
 .ReactCollapse--collapse {
   transition: height 0.5s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
 }

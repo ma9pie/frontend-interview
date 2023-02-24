@@ -40,16 +40,16 @@ function App({ Component, pageProps }) {
   };
 
   return (
-    <Overlay>
+    <Wrapper>
       <Content>{getLayout(<Component {...pageProps} />)}</Content>
-    </Overlay>
+    </Wrapper>
   );
 }
 
 export default App;
 
-const Overlay = styled.div`
-  background-color: var(--overlay);
+const Wrapper = styled.div`
+  background-color: var(--wrapperBg);
   height: 100%;
 `;
 const Content = styled.div`
