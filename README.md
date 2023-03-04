@@ -33,11 +33,19 @@ PWA(Progressive Web App)를 적용하여 반응형 모바일 웹앱으로 개발
 
 - 2023-02-18
   - 코드 리팩토링 및 검색 기능 추가
-  <div style="display:flex">
+<div style="display:flex">
   <img src="https://user-images.githubusercontent.com/115917964/219864233-488e366f-8d29-4662-9904-31657b93c2fa.png" width=30% height=30%/>
   <img src="https://user-images.githubusercontent.com/115917964/219864250-0455fe1d-a265-48da-b43d-c47d90d2082c.png" width=30% height=30%/>
   <img src="https://user-images.githubusercontent.com/115917964/219864266-ede1e225-fcba-4631-a6d4-1253cb78bef3.png" width=30% height=30%/>
 <div>
+<br/>
+
+- 2023-03-05
+  - 사이드바 추가(문의하기, 깃헙링크)
+<div style="display:flex">
+  <img src="https://user-images.githubusercontent.com/115917964/222925060-139de342-f045-4cbc-aa8e-5ae08b39d011.png" width=30% height=30%/>
+<div>
+
   
 
   
