@@ -25,6 +25,10 @@ input:focus {
   outline: none;
 }
 
+svg {
+  cursor: pointer;
+}
+
 /* 다크 모드(기본) */
 :root {
   --vh: 100%;
@@ -77,7 +81,7 @@ input:focus {
 
   // 컴포넌트
   --textBox: #2d3138;
-  --disabled: #3b3b3b;
+  --selected: #3b3b3b;
   --sectionLine: #343a45;
   --icon1: #4a515d;
   --icon2: #727988;
@@ -101,7 +105,7 @@ input:focus {
 
   // 컴포넌트
   --textBox: #f9f9f9;
-  --disabled: #e9eaed;
+  --selected: #e9eaed;
   --sectionLine: #f0f0f0;
   --icon1: #b4b9c1;
   --icon2: #727988;

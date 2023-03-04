@@ -1,17 +1,12 @@
 import styled from "@emotion/styled";
 import React from "react";
 import ThemeToggle from "@/components/common/ThemeToggle";
-import ModalUtils from "@/utils/ModalUtils";
 import ListSvg from "@/svg/ListSvg";
 
 function Header(props) {
   return (
     <Wrapper>
-      <Icon
-        onClick={() =>
-          ModalUtils.openAlert({ message: "사이드 메뉴 개발 예정" })
-        }
-      >
+      <Icon onClick={props.toggleSideBar}>
         <ListSvg></ListSvg>
       </Icon>
       <Title>프론트엔드 면접 질문</Title>

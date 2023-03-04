@@ -216,7 +216,7 @@ const Track = styled.div`
 `;
 const Thumb = styled.div`
   border-radius: 12px;
-  background-color: var(--disabled);
+  background-color: var(--selected);
   position: absolute;
   width: 4px;
   height: ${(props) => props.height};

@@ -4,12 +4,30 @@ import ScrollBar from "@/components/common/ScrollBar";
 import Footer from "@/components/layout/Footer";
 import Head from "@/components/layout/Head";
 import Header from "@/components/layout/Header";
+import SideBar from "@/components/layout/SideBar";
+import ModalUtils from "@/utils/ModalUtils";
 
-function CommonLayout(props) {
+function HomeLayout(props) {
+  const [left, setLeft] = useState(-200);
+  const [isOpenSideBar, setIsOpenSideBar] = useState(false);
+
+  useEffect(() => {
+    setLeft(isOpenSideBar ? 0 : -200);
+  }, [isOpenSideBar]);
+
+  const toggleSideBar = () => {
+    setIsOpenSideBar(!isOpenSideBar);
+  };
+
   return (
     <Container>
       <Head></Head>
-      <Header></Header>
+      <Header toggleSideBar={toggleSideBar}></Header>
+      <SideBar
+        left={`${left}px`}
+        isOpenSideBar={isOpenSideBar}
+        setIsOpenSideBar={setIsOpenSideBar}
+      ></SideBar>
       <Body>
         <ScrollBar height="calc(var(--vh) - 100px)">{props.children}</ScrollBar>
       </Body>
@@ -18,7 +36,7 @@ function CommonLayout(props) {
   );
 }
 
-export default CommonLayout;
+export default HomeLayout;
 
 const Container = styled.div`
   position: relative;

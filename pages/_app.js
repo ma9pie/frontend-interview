@@ -1,11 +1,8 @@
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import GoogleAnalyticsUtils from "@/utils/GoogleAnalyticsUtils";
-import "@/styles/reset.scss";
-import "@/styles/fonts.scss";
-import "@/styles/globals.scss";
-import "@/styles/simplebar.scss";
+import "@/styles/app.scss";
 
 function App({ Component, pageProps }) {
   const router = useRouter();

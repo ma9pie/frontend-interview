@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import List from "@/components/common/List";
 import ListContainer from "@/components/common/ListContainer";
 import Search from "@/components/common/Search";
-import CommonLayout from "@/layouts/CommonLayout";
+import HomeLayout from "@/layouts/HomeLayout";
 
 const data = [].concat(cs, css, javascript, react, frontend);
 
@@ -145,7 +145,7 @@ function Home() {
 export default Home;
 
 Home.getLayout = function getLayout(page) {
-  return <CommonLayout>{page}</CommonLayout>;
+  return <HomeLayout>{page}</HomeLayout>;
 };
 
 const Wrapper = styled.div`
