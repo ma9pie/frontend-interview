@@ -4,41 +4,49 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta charset="utf-8" />
-        <meta name="robots" content="index,nofollow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <meta name="title" content="프론트엔드 기술 면접 질문" />
+        {/* 메타 태그 설정 */}
         <meta
           name="description"
           content="구글, 티스토리, 깃헙 등등 프론트엔드(Frontend) 기술 면접에서 자주 물어보는 질문 자료들을 정리하여 만든 사이트입니다."
         />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="ma9pie" />
+        <meta name="image" content="/images/logo.svg" />
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="HTML, CSS, JavaScript, React, Frontend, Interview"
+          content="HTML, CSS, JavaScript, React, Frontend, Interview, web, 프론트엔드, 웹개발, 리액트, 프론트엔드 면접, 프론트엔드 기술 면접, 인터뷰, 면접"
         />
-        <meta name="author" content="ma9pie" />
 
         {/* Naver 블로그, 카카오톡 미리보기 설정 */}
-        <meta property="og:title" content="프론트엔드 기술 면접 질문" />
         <meta
           property="og:url"
           content="https://frontend-interview-question.vercel.app"
         />
-        <meta property="og:type" content="website" />
         <meta property="og:site_name" content="프론트엔드 기술 면접 질문" />
+        <meta property="og:title" content="프론트엔드 기술 면접 질문" />
+        <meta property="og:image" content="/images/logo.svg" />
         <meta
           property="og:description"
           content="구글, 티스토리, 깃헙 등등 프론트엔드(Frontend) 기술 면접에서 자주 물어보는 질문 자료들을 정리하여 만든 사이트입니다."
         />
+        <meta property="og:type" content="website" />
 
         {/* 트위터 미리보기 설정 */}
         <meta name="twitter:card" content="프론트엔드 기술 면접 질문" />
+        <meta
+          name="twitter:url"
+          content="https://frontend-interview-question.vercel.app"
+        />
+        <meta name="twitter:site_name" content="프론트엔드 기술 면접 질문" />
         <meta name="twitter:title" content="프론트엔드 기술 면접 질문" />
+        <meta name="twitter:image" content="/images/logo.svg" />
         <meta
           name="twitter:description"
           content="구글, 티스토리, 깃헙 등등 프론트엔드(Frontend) 기술 면접에서 자주 물어보는 질문 자료들을 정리하여 만든 사이트입니다."
         />
+        <meta name="twitter:type" content="website" />
 
         {/* 구글 서치 콘솔 */}
         <meta
