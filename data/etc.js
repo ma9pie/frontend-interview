@@ -21,7 +21,7 @@ const list = [
   },
   {
     importance: "5",
-    question: "요즘 공부중이시는 것에대해 설명해주세요.",
+    question: "요즘 공부하시고 있는 것에 대해 말씀해주세요.",
     answer: null,
   },
   {
