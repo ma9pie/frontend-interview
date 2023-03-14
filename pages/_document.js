@@ -10,7 +10,6 @@ export default function Document() {
           content="구글, 티스토리, 깃헙 등등 프론트엔드(Frontend) 기술 면접에서 자주 물어보는 질문 자료들을 정리하여 만든 사이트입니다."
         />
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="ma9pie" />
         <meta name="image" content="/images/logo.svg" />
         <meta name="robots" content="index, follow" />
