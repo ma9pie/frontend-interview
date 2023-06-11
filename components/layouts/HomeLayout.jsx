@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScrollBar from "@/components/common/ScrollBar";
-import Footer from "@/components/layout/Footer";
-import Head from "@/components/layout/Head";
-import Header from "@/components/layout/Header";
-import SideBar from "@/components/layout/SideBar";
-import ModalUtils from "@/utils/ModalUtils";
+import Footer from "@/components/layouts/Footer";
+import Head from "@/components/layouts/Head";
+import Header from "@/components/layouts/Header";
+import SideBar from "@/components/layouts/SideBar";
 
 function HomeLayout(props) {
   const [left, setLeft] = useState(-200);

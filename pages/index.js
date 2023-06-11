@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import List from "@/components/common/List";
 import ListContainer from "@/components/common/ListContainer";
 import Search from "@/components/common/Search";
-import HomeLayout from "@/layouts/HomeLayout";
+import HomeLayout from "@/components/layouts/HomeLayout";
 
 const data = [].concat(cs, css, javascript, react, frontend);
 
