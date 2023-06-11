@@ -1,8 +1,13 @@
 # 프론트엔드 면접질문 모음집 
-🔗 https://frontend-interview-question.vercel.app/
+🔗 https://frontend-interview-question.vercel.app/  
 
-![image](https://user-images.githubusercontent.com/115917964/208709921-5584dc02-ad38-4126-8eca-08d0f003fa01.png)
-![image](https://user-images.githubusercontent.com/115917964/208709999-27d6851f-a8a4-42ca-90c9-ec08eba65824.png)
+<div style="display:flex">
+  <img src="https://user-images.githubusercontent.com/115917964/208709921-5584dc02-ad38-4126-8eca-08d0f003fa01.png" width=45% height=45%/>
+  <img src="https://user-images.githubusercontent.com/115917964/208709999-27d6851f-a8a4-42ca-90c9-ec08eba65824.png" width=45% height=45%/>
+<div>
+
+### 📆 프로젝트 기간
+개발 기간 : 2022.11 ~ 2023.02
 
 ### Description
 구글, 티스토리, 깃헙 등등 프론트엔드 면접에서 자주 물어보는 질문 자료들을 정리하여 만든 사이트입니다.  
