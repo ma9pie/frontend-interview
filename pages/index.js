@@ -1,13 +1,14 @@
 import { cs, css, etc, frontend, javascript, react } from "@/data";
+import useDebounce from "@/hooks/useDebounce";
 import useThrottle from "@/hooks/useThrottle";
+import useTrackEvent from "@/hooks/useTrackEvent";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
+import { useEffect } from "react";
 import List from "@/components/common/List";
 import ListContainer from "@/components/common/ListContainer";
 import Search from "@/components/common/Search";
 import HomeLayout from "@/components/layouts/HomeLayout";
-
-const data = [].concat(cs, css, javascript, react, frontend);
 
 const list = [
   {
@@ -36,69 +37,74 @@ const list = [
   },
 ];
 function Home() {
+  const { trackSearch } = useTrackEvent();
+
   const [searchWord, setSearchWord] = useState("");
-  const [results, setResults] = useState([]);
+  const [filterdList, setFilterdList] = useState([]);
+
+  useEffect(() => {
+    updateList(searchWord);
+  }, [searchWord]);
 
   // 입력 상태 관리
   const handleSearchWord = (e) => {
-    const { value } = e.target;
-    findWord(value.trim());
+    const value = e.target.value.trim();
     setSearchWord(value);
+    debouncedTrackSearch(value);
   };
 
   // 검색 결과
-  const findWord = useThrottle((word) => {
-    setResults(
-      data.filter(
-        (item) => item.question.includes(word) || item.answer.includes(word)
-      )
-    );
+  const updateList = useThrottle((word) => {
+    const _list = [];
+    list.map(({ category, data }) => {
+      const _data = data.filter(
+        ({ question, answer }) =>
+          question?.includes(word) || answer?.includes(word)
+      );
+      if (_data.length === 0) return;
+      _list.push({
+        category: category,
+        data: _data,
+      });
+    });
+    setFilterdList(_list);
   }, 100);
 
-  if (searchWord) {
-    return (
-      <Wrapper>
-        <Search
-          searchWord={searchWord}
-          resetSearchWord={() => setSearchWord("")}
-          onChange={handleSearchWord}
-        ></Search>
-        {results.length === 0 ? (
-          <NoResults>검색 결과가 없습니다.</NoResults>
-        ) : (
-          <ListContainer>
-            {results.map((item, key) => (
-              <List
-                key={item.question}
-                question={item.question}
-                answer={item.answer}
-              ></List>
-            ))}
-          </ListContainer>
-        )}
-      </Wrapper>
-    );
-  }
+  // 검색어 추적
+  const debouncedTrackSearch = useDebounce((word) => {
+    trackSearch(word);
+  }, 1000);
 
   return (
     <Wrapper>
-      <Search searchWord={searchWord} onChange={handleSearchWord}></Search>
+      <Search
+        searchWord={searchWord}
+        setSearchWord={setSearchWord}
+        onChange={handleSearchWord}
+      ></Search>
 
-      {list.map(
-        ({ category, data }) =>
-          data.length > 0 && (
-            <ListContainer key={category} title={category}>
-              {data.map((item, key) => (
-                <List
-                  key={key}
-                  category={category}
-                  question={item.question}
-                  answer={item.answer}
-                ></List>
-              ))}
-            </ListContainer>
-          )
-      )}
+      {(() => {
+        const length = filterdList.map(({ data }) => data).length;
+        if (searchWord && length === 0) {
+          return <NoResults>검색 결과가 없습니다.</NoResults>;
+        } else {
+          return filterdList.map(
+            ({ category, data }) =>
+              data.length > 0 && (
+                <ListContainer key={category} title={category}>
+                  {data.map((item, key) => (
+                    <List
+                      key={key}
+                      category={category}
+                      question={item.question}
+                      answer={item.answer}
+                    ></List>
+                  ))}
+                </ListContainer>
+              )
+          );
+        }
+      })()}
     </Wrapper>
   );
 }

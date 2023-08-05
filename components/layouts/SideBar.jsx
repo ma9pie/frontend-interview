@@ -1,16 +1,20 @@
+import useTrackEvent from "@/hooks/useTrackEvent";
 import styled from "@emotion/styled";
 import React from "react";
 import CloseSvg from "@/svg/CloseSvg";
 import EmailSvg from "@/svg/EmailSvg";
 import GithubSvg from "@/svg/GithubSvg";
 
-function SideBar(props) {
+function SideBar({ isOpen, left, setIsOpen }) {
+  const { trackClick } = useTrackEvent();
+
   const closeSideBar = () => {
-    props.setIsOpenSideBar(false);
+    setIsOpen(false);
   };
 
   // 문의하기
   const inquiry = () => {
+    trackClick("Link", "inquiry");
     window.open(
       "https://docs.google.com/forms/d/1xa0qRIqe1yab4IdsnN6UaAsoM4dyuxpVZmA6wFWnPDg",
       "_blank"
@@ -19,13 +23,14 @@ function SideBar(props) {
 
   // 깃허브
   const github = () => {
+    trackClick("Link", "github");
     window.open("https://github.com/ma9pie/frontend-interview", "_blank");
   };
 
   return (
     <Wrapper>
-      {props.isOpenSideBar && <Overlay onClick={closeSideBar}></Overlay>}
-      <Content left={props.left}>
+      {isOpen && <Overlay onClick={closeSideBar}></Overlay>}
+      <Content left={left}>
         <Top>
           <CloseSvg width={28} height={28} onClick={closeSideBar}></CloseSvg>
         </Top>

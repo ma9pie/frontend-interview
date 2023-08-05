@@ -3,29 +3,22 @@ import React from "react";
 import DeleteSvg from "@/svg/DeleteSvg";
 import SearchSvg from "@/svg/SearchSvg";
 
-function Search(props) {
+function Search({ searchWord, setSearchWord, onChange }) {
   return (
     <Wrapper>
       <SearchSvg></SearchSvg>
       <Input
         type="text"
         name="searchWord"
-        value={props.searchWord}
-        onChange={props.onChange}
+        value={searchWord}
+        onChange={onChange}
       ></Input>
-      {props.searchWord && (
-        <DeleteSvg onClick={props.resetSearchWord}></DeleteSvg>
-      )}
+      {searchWord && <DeleteSvg onClick={() => setSearchWord("")}></DeleteSvg>}
     </Wrapper>
   );
 }
 
 export default Search;
-
-Search.defaultProps = {
-  onChange: () => {},
-  resetSearchWord: () => {},
-};
 
 const Wrapper = styled.div`
   display: flex;

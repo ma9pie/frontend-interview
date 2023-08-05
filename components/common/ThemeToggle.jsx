@@ -1,9 +1,13 @@
+import useTrackEvent from "@/hooks/useTrackEvent";
 import styled from "@emotion/styled";
 import React, { useCallback, useEffect, useState } from "react";
 import Toggle from "@/components/common/Toggle";
 
 const Theme = (props) => {
+  const { trackClick } = useTrackEvent();
+
   const [theme, setTheme] = useState("Dark");
+
   // 다크 모드
   const setDark = useCallback(() => {
     setTheme("Dark");
@@ -20,11 +24,10 @@ const Theme = (props) => {
 
   // 테마 변경
   const toggleTheme = (e) => {
-    if (e.target.checked) {
-      setDark();
-    } else {
-      setLight();
-    }
+    const { checked } = e.target;
+    const _theme = checked ? "Dark" : "Light";
+    trackClick("Toggle", _theme);
+    checked ? setDark() : setLight();
   };
 
   useEffect(() => {

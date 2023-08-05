@@ -1,16 +1,21 @@
+import useTrackEvent from "@/hooks/useTrackEvent";
 import styled from "@emotion/styled";
 import React, { useRef, useState } from "react";
 import Answer from "@/components/common/Answer";
 import Question from "@/components/common/Question";
 
-const List = (props) => {
+const List = ({ category, question, answer }) => {
   const ref = useRef();
+
+  const { trackClick } = useTrackEvent();
+
   const [height, setHeight] = useState("0px");
   const [isOpenAnswer, setIsOpenAnswer] = useState(false);
 
   const collapse = () => {
+    trackClick("Accordion", `${category}/${question}`);
     const target = ref.current;
-    const { clientHeight, scrollHeight } = target;
+    const { scrollHeight } = target;
     if (isOpenAnswer) {
       setIsOpenAnswer(false);
       setHeight(`${scrollHeight}px`);
@@ -31,12 +36,12 @@ const List = (props) => {
       <QuestionWrapper onClick={collapse}>
         <Question
           isOpenAnswer={isOpenAnswer}
-          question={props.question}
-          answer={props.answer}
+          question={question}
+          answer={answer}
         ></Question>
       </QuestionWrapper>
       <AnswerWrapper ref={ref} height={height}>
-        <Answer answer={props.answer}></Answer>
+        <Answer answer={answer}></Answer>
       </AnswerWrapper>
     </Wrapper>
   );

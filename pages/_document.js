@@ -153,26 +153,6 @@ export default function Document() {
           sizes="128x128"
         />
 
-        {/* 구글 애널리틱스 */}
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-        />
-        <script
-          id="google-analytics"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
-        />
-
         {/* 구글 애드센스 */}
         <script
           async

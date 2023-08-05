@@ -15,6 +15,7 @@ const useThrottle = (
   const throttle = useCallback(
     function (...args) {
       const { trailing, leading } = option;
+
       // 딜레이 호출 함수
       const waitFunc = () => {
         if (trailing && lastArgs.current) {

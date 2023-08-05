@@ -1,26 +1,24 @@
+import useTrackEvent from "@/hooks/useTrackEvent";
 import styled from "@emotion/styled";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import GoogleAnalyticsUtils from "@/utils/GoogleAnalyticsUtils";
 import "@/styles/app.scss";
 
 function App({ Component, pageProps }) {
   const router = useRouter();
   const getLayout = Component.getLayout || ((page) => page);
 
-  // 구글 애널리틱스 조회수 측정
-  useEffect(() => {
-    const { hostname } = window.location;
-    if (hostname === "localhost") return;
+  const { initializeGA, trackPageView } = useTrackEvent();
 
-    const handleRouteChange = (url) => {
-      GoogleAnalyticsUtils.changeRouteGtag(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+  // Init GA4
+  useEffect(() => {
+    initializeGA();
+  }, []);
+
+  // 페이지 view 추적
+  useEffect(() => {
+    trackPageView();
+  }, [router.pathname]);
 
   // viewHeight 설정
   useEffect(() => {

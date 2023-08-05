@@ -3,10 +3,10 @@ import React from "react";
 import ThemeToggle from "@/components/common/ThemeToggle";
 import ListSvg from "@/svg/ListSvg";
 
-function Header(props) {
+function Header({ onClickMenu }) {
   return (
     <Wrapper>
-      <Icon onClick={props.toggleSideBar}>
+      <Icon onClick={onClickMenu}>
         <ListSvg></ListSvg>
       </Icon>
       <Title>프론트엔드 면접 질문</Title>
