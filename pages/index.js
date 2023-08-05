@@ -14,6 +14,32 @@ import HomeLayout from "@/components/layouts/HomeLayout";
 
 const data = [].concat(cs, css, javascript, react, frontend);
 
+const list = [
+  {
+    category: "CS",
+    data: cs,
+  },
+  {
+    category: "CSS",
+    data: css,
+  },
+  {
+    category: "JavaScript",
+    data: javascript,
+  },
+  {
+    category: "React",
+    data: react,
+  },
+  {
+    category: "Frontend",
+    data: frontend,
+  },
+  {
+    category: "기타",
+    data: etc,
+  },
+];
 function Home() {
   const [searchWord, setSearchWord] = useState("");
   const [results, setResults] = useState([]);
@@ -67,76 +93,21 @@ function Home() {
   return (
     <Wrapper>
       <Search searchWord={searchWord} onChange={handleSearchWord}></Search>
-      {cs.length > 0 && (
-        <ListContainer title="CS">
-          {cs.map((item, key) => (
-            <List
-              key={key}
-              question={item.question}
-              answer={item.answer}
-            ></List>
-          ))}
-        </ListContainer>
-      )}
 
-      {css.length > 0 && (
-        <ListContainer title="CSS">
-          {css.map((item, key) => (
-            <List
-              key={key}
-              question={item.question}
-              answer={item.answer}
-            ></List>
-          ))}
-        </ListContainer>
-      )}
-
-      {javascript.length > 0 && (
-        <ListContainer title="JavaScript">
-          {javascript.map((item, key) => (
-            <List
-              key={key}
-              question={item.question}
-              answer={item.answer}
-            ></List>
-          ))}
-        </ListContainer>
-      )}
-
-      {react.length > 0 && (
-        <ListContainer title="React">
-          {react.map((item, key) => (
-            <List
-              key={key}
-              question={item.question}
-              answer={item.answer}
-            ></List>
-          ))}
-        </ListContainer>
-      )}
-
-      {frontend.length > 0 && (
-        <ListContainer title="Frontend">
-          {frontend.map((item, key) => (
-            <List
-              key={key}
-              question={item.question}
-              answer={item.answer}
-            ></List>
-          ))}
-        </ListContainer>
-      )}
-
-      {etc.length > 0 && (
-        <ListContainer title="기타">
-          {etc.map((item, key) => (
-            <List
-              key={key}
-              question={item.question}
-              answer={item.answer}
-            ></List>
-          ))}
-        </ListContainer>
+      {list.map(
+        ({ category, data }) =>
+          data.length > 0 && (
+            <ListContainer key={category} title={category}>
+              {data.map((item, key) => (
+                <List
+                  key={key}
+                  category={category}
+                  question={item.question}
+                  answer={item.answer}
+                ></List>
+              ))}
+            </ListContainer>
+          )
       )}
     </Wrapper>
   );
