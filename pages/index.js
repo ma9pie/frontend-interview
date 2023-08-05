@@ -1,9 +1,4 @@
-import cs from "@/data/cs";
-import css from "@/data/css";
-import etc from "@/data/etc";
-import frontend from "@/data/frontend";
-import javascript from "@/data/javascript";
-import react from "@/data/react";
+import { cs, css, etc, frontend, javascript, react } from "@/data";
 import useThrottle from "@/hooks/useThrottle";
 import styled from "@emotion/styled";
 import React, { useState } from "react";
@@ -51,11 +46,6 @@ function Home() {
     setSearchWord(value);
   };
 
-  // 입력 리셋
-  const resetSearchWord = (e) => {
-    setSearchWord("");
-  };
-
   // 검색 결과
   const findWord = useThrottle((word) => {
     setResults(
@@ -70,8 +60,8 @@ function Home() {
       <Wrapper>
         <Search
           searchWord={searchWord}
+          resetSearchWord={() => setSearchWord("")}
           onChange={handleSearchWord}
-          resetSearchWord={resetSearchWord}
         ></Search>
         {results.length === 0 ? (
           <NoResults>검색 결과가 없습니다.</NoResults>

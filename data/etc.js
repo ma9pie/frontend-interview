@@ -1,4 +1,4 @@
-const list = [
+export const etc = [
   {
     importance: "5",
     question: "자기소개 부탁드립니다.",
@@ -40,5 +40,3 @@ const list = [
     answer: null,
   },
 ];
-
-export default list;

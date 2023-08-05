@@ -1,4 +1,4 @@
-const list = [
+export const frontend = [
   {
     importance: "5",
     question: "DNS에 대해 설명해 주세요.",
@@ -219,5 +219,3 @@ const list = [
     CI/CD를 통해서 개발 수정 사항을 반영하는 데 걸리는 시간을 줄이고 품질과 안정성을 개선할 수 있으며, 이를 통해 더 빠른 혁신, 더 나은 고객만족, 비즈니스 성과 개선으로 이어질 수 있습니다.`,
   },
 ];
-
-export default list;

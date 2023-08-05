@@ -1,4 +1,4 @@
-const list = [
+export const javascript = [
   {
     importance: "5",
     question: "Sync와 Async의 차이점을 설명해 주세요.",
@@ -415,5 +415,3 @@ const list = [
     이벤트 루프는 콜 스택이 다 비워지면 콜백 큐에 존재하는 함수들을 하나씩 콜 스택에 옮기는 역할을 합니다.`,
   },
 ];
-
-export default list;

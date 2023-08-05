@@ -1,4 +1,4 @@
-const list = [
+export const react = [
   {
     importance: "5",
     question: "DOM에 대해 설명해 주세요.",
@@ -180,5 +180,3 @@ const list = [
     answer: `리액트 전역 상태 관리는 contextAPI를 통한 방법 및 Redux, MobX, Rocoil와 같은 상태 관리 라이브러리를 통해 데이터를 관리할 수 있습니다.`,
   },
 ];
-
-export default list;

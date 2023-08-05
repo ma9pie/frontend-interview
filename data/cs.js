@@ -1,4 +1,4 @@
-const list = [
+export const cs = [
   {
     importance: "5",
     question: "객체 지향 프로그래밍에 대해 설명해 주세요.",
@@ -74,5 +74,3 @@ const list = [
     반면, 라이브러리는 프로그래머가 흐름에 대해 제어를 하며 필요한 상황에 가져다 쓸 수 있습니다.`,
   },
 ];
-
-export default list;
