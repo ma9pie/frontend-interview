@@ -2,11 +2,11 @@ import styled from "@emotion/styled";
 import React from "react";
 import Chevron from "@/components/common/Chevron";
 
-const Question = (props) => {
-  if (props.answer === null) {
+const Question = ({ answer, question, isOpen }) => {
+  if (answer === null) {
     return (
       <Wrapper>
-        <Text>{props.question}</Text>
+        <Text>{question}</Text>
       </Wrapper>
     );
   }
@@ -14,15 +14,11 @@ const Question = (props) => {
   return (
     <Wrapper>
       <Chevron
-        type={props.isOpenAnswer ? "up" : "down"}
-        fill={props.isOpenAnswer ? "var(--main)" : "var(--sub)"}
+        type={isOpen ? "up" : "down"}
+        fill={isOpen ? "var(--main)" : "var(--sub)"}
       ></Chevron>
-      <Text
-        color={
-          props.isOpenAnswer || props.answer ? "var(--main)" : "var(--sub)"
-        }
-      >
-        {props.question}
+      <Text color={isOpen || answer ? "var(--main)" : "var(--sub)"}>
+        {question}
       </Text>
     </Wrapper>
   );

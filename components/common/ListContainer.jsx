@@ -7,55 +7,18 @@ import JavascriptSvg from "@/svg/JavascriptSvg";
 import ReactSvg from "@/svg/ReactSvg";
 
 const ListContainer = ({ title, children }) => {
-  const imageSelector = (title) => {
-    switch (title) {
-      case "CS":
-        return (
-          <Title>
-            <CsSvg></CsSvg>
-            <Text>{title}</Text>
-          </Title>
-        );
-      case "CSS":
-        return (
-          <Title>
-            <CssSvg></CssSvg>
-            <Text>{title}</Text>
-          </Title>
-        );
-      case "JavaScript":
-        return (
-          <Title>
-            <JavascriptSvg></JavascriptSvg>
-            <Text>{title}</Text>
-          </Title>
-        );
-      case "React":
-        return (
-          <Title>
-            <ReactSvg></ReactSvg>
-            <Text>{title}</Text>
-          </Title>
-        );
-      case "Frontend":
-        return (
-          <Title>
-            <FrontendSvg color="var(--main)"></FrontendSvg>
-            <Text>{title}</Text>
-          </Title>
-        );
-      default:
-        return (
-          <Title>
-            <Text>{title}</Text>
-          </Title>
-        );
-    }
-  };
-
   return (
     <Wrapper>
-      {imageSelector(title)}
+      <Title>
+        {title === "CS" && <CsSvg></CsSvg>}
+        {title === "CSS" && <CssSvg></CssSvg>}
+        {title === "JavaScript" && <JavascriptSvg></JavascriptSvg>}
+        {title === "React" && <ReactSvg></ReactSvg>}
+        {title === "Frontend" && (
+          <FrontendSvg color="var(--main)"></FrontendSvg>
+        )}
+        <Text>{title}</Text>
+      </Title>
       {children}
     </Wrapper>
   );

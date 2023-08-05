@@ -1,13 +1,11 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const Answer = (props) => {
+const Answer = ({ answer }) => {
   return (
     <Wrapper>
-      {props.answer &&
-        props.answer
-          .split("\n")
-          .map((item, key) => <Text key={key}>{item}</Text>)}
+      {answer &&
+        answer.split("\n").map((item, key) => <Text key={key}>{item}</Text>)}
     </Wrapper>
   );
 };

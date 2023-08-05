@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-function Footer(props) {
+function Footer() {
   return (
     <Wrapper>
       <Copyright>Copyright 2022 ma9pie All rights reserved</Copyright>
