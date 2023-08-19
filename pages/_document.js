@@ -59,7 +59,7 @@ export default function Document() {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="프론트엔드 면접질문" />
         <meta name="application-name" content="프론트엔드 면접질문" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#202020" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
           name="msapplication-TileImage"
