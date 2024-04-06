@@ -4,6 +4,7 @@ import React, { Dispatch, SetStateAction } from 'react';
 import CloseSvg from '@/components/svg/CloseSvg';
 import EmailSvg from '@/components/svg/EmailSvg';
 import GithubSvg from '@/components/svg/GithubSvg';
+import { GITHUB_URL, INQUIRY_URL } from '@/constants';
 import useTrackEvent from '@/hooks/useTrackEvent';
 
 interface Props {
@@ -22,16 +23,13 @@ const SideBar = ({ isOpen, left, setIsOpen }: Props) => {
   // 문의하기
   const inquiry = () => {
     trackClick('Link', 'inquiry');
-    window.open(
-      'https://docs.google.com/forms/d/1xa0qRIqe1yab4IdsnN6UaAsoM4dyuxpVZmA6wFWnPDg',
-      '_blank'
-    );
+    window.open(INQUIRY_URL, '_blank');
   };
 
   // 깃허브
   const github = () => {
     trackClick('Link', 'github');
-    window.open('https://github.com/ma9pie/frontend-interview', '_blank');
+    window.open(GITHUB_URL, '_blank');
   };
 
   return (
