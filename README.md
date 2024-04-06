@@ -51,6 +51,6 @@ PWA(Progressive Web App)를 적용하여 반응형 모바일 웹앱으로 개발
   <img src="https://user-images.githubusercontent.com/115917964/222925060-139de342-f045-4cbc-aa8e-5ae08b39d011.png" width=30% height=30%/>
 <div>
 
-  
-
+- 2024-04-06
+  - Typescript migration
   
