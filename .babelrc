@@ -1,4 +1,3 @@
-/* 사전 설정/플러그인으로 구성 */
 {
   "presets": ["next/babel"],
   "plugins": []
