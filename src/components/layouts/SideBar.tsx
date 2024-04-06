@@ -14,7 +14,7 @@ interface Props {
 }
 
 const SideBar = ({ isOpen, left, setIsOpen }: Props) => {
-  const { trackClick } = useTrackEvent();
+  const { trackClickEvent } = useTrackEvent();
 
   const closeSideBar = () => {
     setIsOpen(false);
@@ -22,13 +22,13 @@ const SideBar = ({ isOpen, left, setIsOpen }: Props) => {
 
   // 문의하기
   const inquiry = () => {
-    trackClick('Link', 'inquiry');
+    trackClickEvent('Link', 'inquiry');
     window.open(INQUIRY_URL, '_blank');
   };
 
   // 깃허브
   const github = () => {
-    trackClick('Link', 'github');
+    trackClickEvent('Link', 'github');
     window.open(GITHUB_URL, '_blank');
   };
 

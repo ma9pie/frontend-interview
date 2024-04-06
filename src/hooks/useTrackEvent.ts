@@ -25,13 +25,13 @@ const useTrackEvent = () => {
   };
 
   // 페이지 view 추적
-  const trackPageView = () => {
+  const trackPageViewEvent = () => {
     ReactGA.set({ page: router.pathname });
     ReactGA.send('pageview');
   };
 
   // 클릭 이벤트 추적
-  const trackClick = (category: string, label: string) => {
+  const trackClickEvent = (category: string, label: string) => {
     console.log(category, label);
     ReactGA.event({
       action: 'Click',
@@ -41,7 +41,7 @@ const useTrackEvent = () => {
   };
 
   // 검색어 추적
-  const trackSearch = (label: string) => {
+  const trackSearchEvent = (label: string) => {
     if (!label) return;
     ReactGA.event({
       action: 'Search',
@@ -52,9 +52,9 @@ const useTrackEvent = () => {
 
   return {
     initializeGA,
-    trackPageView,
-    trackClick,
-    trackSearch,
+    trackPageViewEvent,
+    trackClickEvent,
+    trackSearchEvent,
   };
 };
 

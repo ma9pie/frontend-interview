@@ -12,7 +12,7 @@ import useTrackEvent from '@/hooks/useTrackEvent';
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  const { initializeGA, trackPageView } = useTrackEvent();
+  const { initializeGA, trackPageViewEvent } = useTrackEvent();
 
   // Init GA4
   useEffect(() => {
@@ -21,7 +21,7 @@ function App({ Component, pageProps }: AppProps) {
 
   // 페이지 view 추적
   useEffect(() => {
-    trackPageView();
+    trackPageViewEvent();
   }, [router.pathname]);
 
   return (
