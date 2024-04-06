@@ -22,20 +22,6 @@ function App({ Component, pageProps }: AppProps) {
     trackPageView();
   }, [router.pathname]);
 
-  // viewHeight 설정
-  useEffect(() => {
-    setViewHeight();
-    window.addEventListener('resize', setViewHeight);
-    return () => {
-      window.removeEventListener('resize', setViewHeight);
-    };
-  });
-
-  const setViewHeight = () => {
-    const doc = document.documentElement;
-    doc.style.setProperty('--vh', `${window.innerHeight}px`);
-  };
-
   return (
     <Wrapper>
       <Content>
