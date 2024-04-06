@@ -14,7 +14,7 @@ const Header = ({ onClickMenu }: Props) => {
       <Icon onClick={onClickMenu}>
         <ListSvg></ListSvg>
       </Icon>
-      <Title>프론트엔드 면접 질문</Title>
+      <Title>프론트엔드 기술 면접 질문</Title>
       <ThemeToggle></ThemeToggle>
     </Wrapper>
   );

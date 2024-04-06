@@ -3,8 +3,10 @@ import '@/styles/app.scss';
 import styled from '@emotion/styled';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { DefaultSeo } from 'next-seo';
 import React, { useEffect } from 'react';
 
+import { NEXT_SEO_CONFIG } from '@/config';
 import useTrackEvent from '@/hooks/useTrackEvent';
 
 function App({ Component, pageProps }: AppProps) {
@@ -24,6 +26,7 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <Wrapper>
+      <DefaultSeo {...NEXT_SEO_CONFIG}></DefaultSeo>
       <Content>
         <Component {...pageProps} />
       </Content>
