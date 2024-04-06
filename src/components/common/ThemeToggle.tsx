@@ -5,7 +5,7 @@ import Toggle from '@/components/common/Toggle';
 import useTrackEvent from '@/hooks/useTrackEvent';
 
 const ThemeToggle = () => {
-  const { trackClick } = useTrackEvent();
+  const { trackClickEvent } = useTrackEvent();
 
   const [theme, setTheme] = useState('Dark');
 
@@ -26,7 +26,7 @@ const ThemeToggle = () => {
   // 테마 변경
   const toggleTheme = (checked: boolean) => {
     const _theme = checked ? 'Dark' : 'Light';
-    trackClick('Toggle', _theme);
+    trackClickEvent('Toggle', _theme);
     checked ? setDark() : setLight();
   };
 

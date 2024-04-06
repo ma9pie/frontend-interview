@@ -14,13 +14,13 @@ interface Props {
 const List = ({ category, question, answer }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const { trackClick } = useTrackEvent();
+  const { trackClickEvent } = useTrackEvent();
 
   const [height, setHeight] = useState('0px');
   const [isOpen, setIsOpen] = useState(false);
 
   const collapse = () => {
-    trackClick('Accordion', `${category}/${question}`);
+    trackClickEvent('Accordion', `${category}/${question}`);
     const target = ref.current;
     if (!target) {
       return;

@@ -3,14 +3,16 @@ import '@/styles/app.scss';
 import styled from '@emotion/styled';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { DefaultSeo } from 'next-seo';
 import React, { useEffect } from 'react';
 
+import { NEXT_SEO_CONFIG } from '@/config';
 import useTrackEvent from '@/hooks/useTrackEvent';
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  const { initializeGA, trackPageView } = useTrackEvent();
+  const { initializeGA, trackPageViewEvent } = useTrackEvent();
 
   // Init GA4
   useEffect(() => {
@@ -19,25 +21,12 @@ function App({ Component, pageProps }: AppProps) {
 
   // 페이지 view 추적
   useEffect(() => {
-    trackPageView();
+    trackPageViewEvent();
   }, [router.pathname]);
-
-  // viewHeight 설정
-  useEffect(() => {
-    setViewHeight();
-    window.addEventListener('resize', setViewHeight);
-    return () => {
-      window.removeEventListener('resize', setViewHeight);
-    };
-  });
-
-  const setViewHeight = () => {
-    const doc = document.documentElement;
-    doc.style.setProperty('--vh', `${window.innerHeight}px`);
-  };
 
   return (
     <Wrapper>
+      <DefaultSeo {...NEXT_SEO_CONFIG}></DefaultSeo>
       <Content>
         <Component {...pageProps} />
       </Content>

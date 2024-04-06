@@ -5,7 +5,7 @@ interface Props {
   title?: string;
 }
 
-const HeadComponent = ({ title = '프론트엔드 면접질문' }: Props) => {
+const HeadComponent = ({ title = '프론트엔드 기술 면접 질문' }: Props) => {
   return (
     <Head>
       <title>{title}</title>

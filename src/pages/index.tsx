@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import debounce from 'lodash/debounce';
 import React, { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 import List from '@/components/common/List';
 import ListContainer from '@/components/common/ListContainer';
@@ -42,7 +43,7 @@ const LIST: ListItem[] = [
 ];
 
 const Home = () => {
-  const { trackSearch } = useTrackEvent();
+  const { trackSearchEvent } = useTrackEvent();
 
   const [searchWord, setSearchWord] = useState('');
   const [filterdList, setFilterdList] = useState<ListItem[]>([]);
@@ -54,9 +55,19 @@ const Home = () => {
   // 입력 상태 관리
   const handleSearchWord = (value: string) => {
     setSearchWord(value);
-    // TODO: throttle 처리
-    // trackSearch(searchWord);
+    debouncedTrackSearch(value);
   };
+
+  const debouncedTrackSearch = useMemo(
+    () =>
+      debounce((value: string) => {
+        const _value = value.trim();
+        if (_value) {
+          trackSearchEvent(value);
+        }
+      }, 1000),
+    []
+  );
 
   // 검색 결과
   const updateList = () => {

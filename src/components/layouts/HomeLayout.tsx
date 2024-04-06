@@ -12,7 +12,7 @@ interface Props {
 }
 
 const HomeLayout = ({ children }: Props) => {
-  const { trackClick } = useTrackEvent();
+  const { trackClickEvent } = useTrackEvent();
 
   const [left, setLeft] = useState(-200);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const HomeLayout = ({ children }: Props) => {
 
   const handleClickMemu = () => {
     const _isOpen = !isOpen;
-    trackClick('Icon', 'menu');
+    trackClickEvent('Icon', 'menu');
     setIsOpen(_isOpen);
   };
 

@@ -4,8 +4,6 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  height: 100vh;
-  height: var(--vh);
 }
 
 a {
@@ -16,7 +14,7 @@ a {
 * {
   background-color: var(--bg);
   color: var(--main);
-  font-family: "NotoSansKR";
+  font-family: 'NotoSansKR';
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
@@ -31,8 +29,6 @@ svg {
 
 /* 다크 모드(기본) */
 :root {
-  --vh: 100%;
-
   // font size
   --xs: 0.75rem;
   --sm: 0.875rem;
@@ -89,7 +85,7 @@ svg {
 }
 
 /* 라이트 모드 */
-[data-theme="Light"] {
+[data-theme='Light'] {
   // 브랜드 컬러
   --brandColor: #4299e1;
 
