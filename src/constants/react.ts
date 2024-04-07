@@ -1,4 +1,4 @@
-export const react = [
+export const REACT_LIST = [
   {
     importance: '5',
     question: 'DOM에 대해 설명해 주세요.',

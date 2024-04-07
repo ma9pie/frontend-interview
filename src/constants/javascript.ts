@@ -1,4 +1,4 @@
-export const javascript = [
+export const JAVASCRIPT_LIST = [
   {
     importance: '5',
     question: 'Sync와 Async의 차이점을 설명해 주세요.',
@@ -43,6 +43,11 @@ export const javascript = [
     1. 코딩 패턴으로 콜백 익명 함수를 각각의 함수로 분리
     2. Promise 사용
     3. Async + Await 사용`,
+  },
+  {
+    importance: '5',
+    question: 'Event loop에 대해 설명해 주세요.',
+    answer: `이벤트 루프는 콜 스택과 태스크 큐를 주시하고 콜 스택이 비어있다면 태스크 큐에 있던 작업을 콜 스택으로 보내주는 역할을 합니다.`,
   },
   {
     importance: '5',

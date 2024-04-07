@@ -7,7 +7,14 @@ import List from '@/components/common/List';
 import ListContainer from '@/components/common/ListContainer';
 import Search from '@/components/common/Search';
 import HomeLayout from '@/components/layouts/HomeLayout';
-import { cs, css, etc, frontend, javascript, react } from '@/data';
+import {
+  CS_LIST,
+  CSS_LIST,
+  ETC_LIST,
+  FRONTEND_LIST,
+  JAVASCRIPT_LIST,
+  REACT_LIST,
+} from '@/constants';
 import useTrackEvent from '@/hooks/useTrackEvent';
 
 interface ListItem {
@@ -18,27 +25,27 @@ interface ListItem {
 const LIST: ListItem[] = [
   {
     category: 'CS',
-    data: cs,
+    data: CS_LIST,
   },
   {
     category: 'CSS',
-    data: css,
+    data: CSS_LIST,
   },
   {
     category: 'JavaScript',
-    data: javascript,
+    data: JAVASCRIPT_LIST,
   },
   {
     category: 'React',
-    data: react,
+    data: REACT_LIST,
   },
   {
     category: 'Frontend',
-    data: frontend,
+    data: FRONTEND_LIST,
   },
   {
     category: '기타',
-    data: etc,
+    data: ETC_LIST,
   },
 ];
 
