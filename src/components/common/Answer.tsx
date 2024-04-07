@@ -23,5 +23,5 @@ const Text = styled.p`
   color: var(--sub);
   line-height: 24px;
   min-height: 24px;
-  word-break: break-all;
+  word-break: break-word;
 `;

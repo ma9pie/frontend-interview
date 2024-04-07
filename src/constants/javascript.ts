@@ -2,15 +2,9 @@ export const JAVASCRIPT_LIST = [
   {
     importance: '5',
     question: 'Sync와 Async의 차이점을 설명해 주세요.',
-    answer: `동기와 비동기는 특정 작업을 수행할 때 해당 작업의 완료 여부를 신경 쓰는지에 따라 구분됩니다.
-
-    [Sync]
-    - 요청을 보낸 후 응답을 기다림
-    - 직렬적 task 수행
-
-    [Async]
-    - 요청의 응답을 기다리지 않고 다음 동작 실행
-    - 병렬적 task 수행`,
+    answer: `Sync는 요청을 보내고 해당 요청에 대한 응답을 기다리는 것을 의미하고, Async는 요청에 대한 응답을 기다리지 않고 다음 동작을 수행하는 것을 의미합니다.
+    
+    예시로 alert와 같은 작업은 블로킹이고 setTimeout, fetch와 같은 작업들은 논블로킹입니다.`,
   },
   {
     importance: '5',
@@ -47,7 +41,11 @@ export const JAVASCRIPT_LIST = [
   {
     importance: '5',
     question: 'Event loop에 대해 설명해 주세요.',
-    answer: `이벤트 루프는 콜 스택과 태스크 큐를 주시하고 콜 스택이 비어있다면 태스크 큐에 있던 작업을 콜 스택으로 보내주는 역할을 합니다.`,
+    answer: `자바스크립트의 이벤트 루프는 단일 스레드에서 실행되는 비동기 작업을 처리하는 메커니즘입니다. 이벤트 루프는 Call stack, Micro task queue, Macro task queue로 구성됩니다.
+    
+    Micro task queue에는 Promise, async/await 과 같은 작업들이 들어가고, Macro task queue에는 Web API (setInterval, setTimeout)와 같은 작업들이 들어갑니다.
+    
+    이벤트 루프는 Call stack을 확인하고, Call stack이 비어있는 경우 Micro task queue의 작업을 Call stack으로 옮깁니다. 그리고 Micro task queue가 비어있는 경우, Macro task queue의 작업을 Call stack으로 옮기고 처리합니다.`,
   },
   {
     importance: '5',
