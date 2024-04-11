@@ -1,14 +1,14 @@
-export const frontend = [
+export const FRONTEND_LIST = [
   {
-    importance: "5",
-    question: "DNS에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'DNS에 대해 설명해 주세요.',
     answer: `도메인 이름 시스템 서버(Domain Name System Servers)는 URL들의 이름과 IP주소를 저장하고 있는 데이터베이스로, 웹사이트를 위한 주소록입니다.
     숫자로 된 IP주소 대신 사용자가 사용하기 편리하도록 주소를 매핑해 주는 역할을 합니다.`,
   },
   {
-    importance: "5",
+    importance: '5',
     question:
-      "브라우저 주소창에 www.google.com을 입력하면 발생하는 일을 설명해 주세요.",
+      '브라우저 주소창에 www.google.com을 입력하면 발생하는 일을 설명해 주세요.',
     answer: `1. 사용자가 웹브라우저 검색창에 www.google.com 입력
     2. 웹브라우저는 캐싱된 DNS 기록들을 통해 해당 도메인 주소와 대응하는 IP주소를 확인
     3. 웹브라우저가 HTTP를 사용하여 DNS에게 입력된 도메인 주소를 요청
@@ -20,8 +20,8 @@ export const frontend = [
     9. 웹브라우저는 화면에 웹페이지 내용물 출력`,
   },
   {
-    importance: "5",
-    question: "브라우저 렌더링 과정을 설명해 주세요.",
+    importance: '5',
+    question: '브라우저 렌더링 과정을 설명해 주세요.',
     answer: `1. HTML 파싱 후 DOM(Document Object Model) 트리 구축
   2. CSS 파싱 후 CSSOM(CSS Object Model) 트리 구축
   3. script 태그를 만나면 HTML 파싱을 중단하고 Javascript 코드를 파싱
@@ -30,8 +30,8 @@ export const frontend = [
   6. 계산한 위치, 크기 기반으로 화면에 그림`,
   },
   {
-    importance: "5",
-    question: "URI과 URL의 차이",
+    importance: '5',
+    question: 'URI과 URL의 차이',
     answer: `[URI] : 통합 자원 식별자(Uniform Resource Identifier)
     URI는 인터넷상의 리소스(자원) 자체를 식별하는 고유한 문자열 시퀀스입니다.
 
@@ -46,8 +46,8 @@ export const frontend = [
    여기서 query string으로 식별자가 포함된 https://www.example.com/index.html?page=123 은 URI입니다.`,
   },
   {
-    importance: "5",
-    question: "RESTful API에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'RESTful API에 대해 설명해 주세요.',
     answer: `REST(Representational State Transfer API)란 HTTP URI를 통해서 자원(resource)을 명시하고, HTTP Method(GET, POST, PUT, DELETE, PATCH 등등)을 통해서 해당 자원(URI)에 대한 CRUD Operation을 적용하는 것을 의미합니다.
     이러한 REST 원리를 따르는 API를 RESTful API라고 합니다.
    
@@ -60,8 +60,8 @@ export const frontend = [
     - 자원은 동사보다 명사로, 대문자보다는 소문자로 표현한다.`,
   },
   {
-    importance: "5",
-    question: "Webpack, Babel, Polyfill에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'Webpack, Babel, Polyfill에 대해 설명해 주세요.',
     answer: `- Webpack
     웹팩은 Javascript, CSS, Img 등등을 브라우저에서 실행할 수 있는 번들 파일로 변환하는 모듈 번들러입니다.
    
@@ -72,8 +72,8 @@ export const frontend = [
     폴리필은 브라우저가 지원하지 않는 자바스크립트 코드를 지원 가능하도록 변환한 코드 조각을 의미합니다. "충전솜"이라는 의미 그대로 최신 문법과 오래된 브라우저 사이의 간격을 메꾸는 역할을 합니다.`,
   },
   {
-    importance: "5",
-    question: "SPA, CSR, SSR의 차이를 설명해 주세요.",
+    importance: '5',
+    question: 'SPA, CSR, SSR의 차이를 설명해 주세요.',
     answer: `- SPA(Single Page Application)
     전체 페이지를 다시 로드할 필요 없이 변경된 부분만 동적으로 업데이트하는 애플리케이션을 의미합니다. 새로고침이 발생하지 않기 때문에 네이티브 앱과 유사하게 매끄럽고 응답성이 뛰어난 서비스를 제공할 수 있습니다.
    
@@ -84,8 +84,8 @@ export const frontend = [
     HTML을 클라이언트에 보내기 전에 서버 측에서 웹 애플리케이션을 렌더링 하는 것을 의미합니다. 서버는 클라이언트에게 요청을 받으면 미리 렌더링 된 페이지를 제공하고, 이러한 방식은 페이지가 처음 로드될 때 컨텐츠가 검색 엔진에 표시되므로 더 빠른 초기 로드 시간과 더 나은 SEO(검색 엔진 최적화)를 제공합니다.`,
   },
   {
-    importance: "5",
-    question: "CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'CORS가 무엇이며, 해결하기 위한 방법에 대해 설명해 주세요.',
     answer: `CORS(Cross Origin Resource Sharing)란 교차 출처 리소스 공유란 뜻이며, 웹 페이지가 제공하는 도메인이 아닌 다른 도메인에서 리소스를 요청하는 것을 의미합니다. 브라우저는 CORS 에러를 발생시켜 악의적인 스크립트가 중요한 데이터에 접근하거나 무단 요청하지 못하도록 방지합니다.
    
     [해결 방법]
@@ -98,8 +98,8 @@ export const frontend = [
     - Chrome 확장 프로그램 "Allow CORS" 사용`,
   },
   {
-    importance: "5",
-    question: "Sementic Markup에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'Sementic Markup에 대해 설명해 주세요.',
     answer: `시멘틱(Sementic)이란 "의미론적인"이라는 의미를 가지며 마크업(Markup)은 HTML 태그로 문서를 작성하는 것을 뜻합니다.
   따라서 시멘틱 마크업이란 의미가 잘 전달되도록 문서를 작성하는 것을 말하는데, 아래와 같이 각 태그가 그 용도에 맞게 사용되어야 합니다.
 
@@ -113,15 +113,15 @@ export const frontend = [
   장점 : 검색엔진 최적화(SEO) 및 웹 접근성에 유리, div, span으로만 이루어진 구조보다 가독성이 좋음`,
   },
   {
-    importance: "5",
-    question: "HTML에서의 attributes와 properties의 차이점을 설명해 주세요.",
+    importance: '5',
+    question: 'HTML에서의 attributes와 properties의 차이점을 설명해 주세요.',
     answer: `attributes는 HTML 마크업의 일부이며, HTML 요소에 대한 추가 정보를 제공하는 데 사용됩니다. 요소의 id, class, style과 같은 것들을 의미합니다.
    
     반면 properties는 DOM의 일부이고, HTML 요소의 실제 값과 동작을 나타내며, javascript를 통해 HTML 요소와 상호작용 하며 동적으로 업데이트됩니다.`,
   },
   {
-    importance: "5",
-    question: "로컬 스토리지, 세션 스토리지, 쿠키에 대해 설명해 주세요.",
+    importance: '5',
+    question: '로컬 스토리지, 세션 스토리지, 쿠키에 대해 설명해 주세요.',
     answer: `- localStorage
     로컬 스토리지는 브라우저 내에서 로컬로 데이터를 저장할 수 있는 저장소입니다. 로컬 스토리지에 저장된 데이터는 사용자가 브라우저를 닫거나 컴퓨터를 재시작한 후에도 그대로 유지됩니다.
    
@@ -133,13 +133,8 @@ export const frontend = [
     4KB의 크기 제한이 있으며 일정 시간이 지나면 만료되도록 설정할 수 있고 만료 후에는 사용자의 컴퓨터에서 삭제됩니다.`,
   },
   {
-    importance: "5",
-    question: "Event loop에 대해 설명해 주세요.",
-    answer: `이벤트 루프는 콜 스택과 태스크 큐를 주시하고 콜 스택이 비어있다면 태스크 큐에 있던 작업을 콜 스택으로 보내주는 역할을 합니다.`,
-  },
-  {
-    importance: "5",
-    question: "MVC, MVVM 패턴에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'MVC, MVVM 패턴에 대해 설명해 주세요.',
     answer: `- MVC
     MVC 패턴은 View(화면), Model(데이터), Controller(컨트롤러)로 구성된 디자인 패턴입니다.
     1. Model : 모델은 프론트엔드 애플리케이션의 데이터 및 로직을 나타내며, 애플리케이션의 상태를 관리하고 모든 비즈니스 로직을 처리합니다.
@@ -153,8 +148,8 @@ export const frontend = [
     3. ViewModel : 뷰모델은 모델과 뷰 사이의 중재자 역할을 하며, 모델의 데이터를 뷰에 표시하기 쉬운 형식으로 변환하는 역할을 합니다. 또한 데이터에 대한 모든 업데이트를 처리하고 이를 모델에 다시 전달합니다.`,
   },
   {
-    importance: "5",
-    question: "HTTP와 HTTPS의 차이점을 설명해 주세요.",
+    importance: '5',
+    question: 'HTTP와 HTTPS의 차이점을 설명해 주세요.',
     answer: `- HTTP
     HTTP는 Hypertext Transfer Protocol의 약자로 웹서버 및 웹 브라우저 상호 간의 데이터 전송을 위한 응용계층 프로토콜입니다.
    
@@ -164,8 +159,8 @@ export const frontend = [
     요약하자면 HTTP는 보안되지 않은 프로토콜인 반면, HTTPS는 데이터를 암호화하여 인터넷을 통해 전송되는 민감한 정보를 보호하는 보안 프로토콜입니다.`,
   },
   {
-    importance: "5",
-    question: "페이지 로드 시간을 줄이는 방법들에 대해서 설명해 주세요.",
+    importance: '5',
+    question: '페이지 로드 시간을 줄이는 방법들에 대해서 설명해 주세요.',
     answer: `1. 이미지 용량 최소화 : HTML, CSS, JS는 모두 텍스트 형태이기 때문에 용량이 적지만 이미지의 경우 평균적으로 1MB의 크기를 가지므로 고용량의 이미지가 많을수록 페이지 로드 시간이 증가하게 됩니다. 해상도가 낮아지지 않는 선에서 이미지를 압축하여 이미지의 용량을 최소화합니다.
    
     2. 코드 정리 : 프로젝트에서 사용하지 않는 불필요한 CSS나 Javascript 코드를 제거하여 프로젝트 빌드 파일의 크기를 줄입니다.
@@ -181,8 +176,8 @@ export const frontend = [
     7. HTTP 요청 수 최소화 : 페이지 로드에 필요한 HTTP 요청이 많을수록 페이지 로딩시간이 길어지므로 HTTP 요청 수를 최소화하여 페이지 로드 시간을 개선할 수 있습니다.`,
   },
   {
-    importance: "5",
-    question: "테스트 코드에 대해 설명해 주세요.",
+    importance: '5',
+    question: '테스트 코드에 대해 설명해 주세요.',
     answer: `프론트엔드에서 테스트 코드란 웹 애플리케이션의 UI가 예상대로 동작하는지를 확인하기 위한 자동화된 테스트를 의미합니다. 일반적으로 단위 테스트, 통합 테스트, e2e 테스트가 있으며, 자주 사용되는 테스팅 라이브러리는 Jest, Mocha, Cypress 등등이 있습니다.
    
     - Unit test(단위 테스트) : 함수 또는 클래시와 같은 개별 구성 요소에 중점을 두고 각 구성요소가 의도한 대로 동작하는지 확인하는 테스트
@@ -194,8 +189,8 @@ export const frontend = [
     프론트엔드에서의 테스트 코드는 개발 초기에 버그를 포착하고 버그 수정과 관련된 시간과 비용을 줄일 수 있으며, 제품의 퀄리티를 향상할 수 있는 장점이 있습니다.`,
   },
   {
-    importance: "5",
-    question: "웹 서비스 배포 시스템 구축 경험이 있으신가요?",
+    importance: '5',
+    question: '웹 서비스 배포 시스템 구축 경험이 있으신가요?',
     answer: `개인 프로젝트의 경우에는 Vercel로 배포를 하고 있습니다. Vercel은 github과 같은 코드베이스를 연결하여 특정 브랜치에 push시 즉시 빌드를 실행하고 자동으로 배포까지 해주는 기능이 있어 별 다른 노력 없이 배포 시스템을 구축할 수 있었습니다.
    
     팀 프로젝트의 경우에는 AWS로 EC2를 생성하고 Nginx를 설치하여 백엔드서버, 웹서버를 구축하였습니다. 그리고 해당 인스턴스에서 프로젝트 파일을 clone 받아 실행시키고 Route 53을 통해 구입한 도메인을 연결하여 웹사이트를 띄웠었습니다. CI/CD는 따로 구축하지 않았고 변경사항이 생길 때마다 인스턴스에 직접 접속하여 배포 파일을 실행시켜 업데이트를 진행하였습니다.
@@ -206,8 +201,8 @@ export const frontend = [
     3. Codedeploy를 통해 배포 상태 확인`,
   },
   {
-    importance: "5",
-    question: "CI/CD에 대해 설명해 주세요.",
+    importance: '5',
+    question: 'CI/CD에 대해 설명해 주세요.',
     answer: `CI/CD는 "지속적인 통합/지속적인 서비스 제공 또는 배포"의 약자입니다.
 
     - CI(Continuous Integration)
