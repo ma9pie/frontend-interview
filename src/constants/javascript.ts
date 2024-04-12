@@ -2,9 +2,7 @@ export const JAVASCRIPT_LIST = [
   {
     importance: '5',
     question: 'Sync와 Async의 차이점을 설명해 주세요.',
-    answer: `Sync는 요청을 보내고 해당 요청에 대한 응답을 기다리는 것을 의미하고, Async는 요청에 대한 응답을 기다리지 않고 다음 동작을 수행하는 것을 의미합니다.
-    
-    예시로 alert와 같은 작업은 블로킹이고 setTimeout, fetch와 같은 작업들은 논블로킹입니다.`,
+    answer: `Sync는 요청을 보내고 해당 요청에 대한 응답을 기다리는 것을 의미하고, Async는 요청에 대한 응답을 기다리지 않고 다음 동작을 수행하는 것을 의미합니다.`,
   },
   {
     importance: '5',
@@ -13,7 +11,9 @@ export const JAVASCRIPT_LIST = [
    
     블로킹은 한 작업이 완료될 때까지 다음 작업을 수행하지 않는 것을 의미합니다.
 
-    논블로킹은 한 작업이 완료되지 않아도 다음 작업을 수행할 수 있는 것을 의미합니다.`,
+    논블로킹은 한 작업이 완료되지 않아도 다음 작업을 수행할 수 있는 것을 의미합니다.
+    
+    예시로 alert와 같은 작업은 블로킹이고 setTimeout, fetch와 같은 작업들은 논블로킹입니다.`,
   },
   {
     importance: '5',
